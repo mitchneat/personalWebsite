@@ -1,0 +1,150 @@
+    /* #landing{
+        height: calc(100vh - 4rem); 
+        width: 100vw; 
+        max-width: 75%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .bg{
+        position: absolute;
+        top: 10vw;
+        right: 10vw;
+        height: 90vh;
+        object-fit: cover;
+        z-index: -1;
+    } 
+    .introContent{
+        width: 100vh;
+        height: 100vh; 
+        padding: 2rem;
+        font-size: 3rem;
+        font-weight: 700;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    */
+    /* #landing {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 2rem;
+    } */
+
+    #landing {
+        padding: 0 2rem; /* Adjust padding as needed */
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+        justify-content: space-between; /* Distribute items evenly along the main axis */
+    }
+    
+    .introContent {
+        flex: 1 1 50%; /* Allow introContent to grow and take up available space */
+        max-width: 50%; /* Limit the width to 50% of the container */
+        padding-right: 2rem; /* Adjust padding as needed */
+    }
+    
+    .bg {
+        flex: 1 1 50%; /* Allow bg to grow and take up available space */
+        max-width: 50%; /* Limit the width to 50% of the container */
+        height: auto; /* Adjust height as needed */
+        object-fit: cover;
+    }
+
+    
+
+    
+    .top-section{
+        display: flex;
+    }
+    
+
+    /* .introContent {
+        flex: 1;
+        padding-right: 2rem; 
+    }
+    .bg {
+        flex: 1;
+        max-width: 40%;
+        height: auto;
+        object-fit: cover;
+    } */
+
+    
+
+    .hello{
+        font-size: 1.75em;
+        font-weight: 100;
+        color: var(--primary-color);
+    }
+
+    .name{
+        color: rgb(96, 6, 185);
+    }
+
+    .aboutpg{
+        font-size: medium;
+        font-weight: 200;
+    }
+/* 
+    .btn{
+        background: white;
+        margin: 1rem 0;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 2rem;
+    }
+
+    .btnImg{
+        object-fit: cover;
+        margin: 0 0.25rem;
+        height: 1rem;
+    } */
+/* 
+    @media screen and (max-width: 840px){
+        .bg{
+            right: -10vw;
+        }
+
+        .introContent{
+            font-size: 10vw;
+        }
+
+        .hello{
+            font-size: 4.5vw;
+        }
+    } */
+    @media screen and (max-width: 840px) {
+        .bg {
+            max-width: 100%; /* Adjust width for smaller screens */
+        }
+    
+        .introContent {
+            padding-right: 0; /* Remove padding on smaller screens */
+        }
+    }
+    .about-section {
+        flex: 1;
+        margin-top: 4rem; 
+        text-align: center;
+    }
+
+
+    .line {
+        border-top: 2px solid white;
+        display: inline-block;
+        width: 40%;
+        margin: 0 10px; 
+    }
+
+/*  
+    h2 {
+        display: flex;
+        align-items: center; 
+        margin: 20px 0;
+    }
+
+    h2 span {
+        flex: none;
+    } */

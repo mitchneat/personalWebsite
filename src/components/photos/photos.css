@@ -1,0 +1,50 @@
+
+  .image-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    /* padding-left: 5%;
+    padding-right: 5%; */
+    gap: 10px;
+  }
+  .title {
+    position: absolute;
+    top: 10px;
+    width: 500px;
+    text-align: center;
+    font-size: 2rem;
+    z-index: 1;
+    color: white;
+    /* transform: translateX(-50%); */
+}
+.image-link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.image-link:hover {
+    filter: brightness(80%); 
+}
+.image { 
+
+    width: 500px; /* Set the width as needed */ 
+    height: auto; /* Maintain aspect ratio */ 
+    position: relative;
+  } 
+/* .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+} */
+/* .image-container:hover {
+    filter: brightness(80%); 
+} */
+
+.image-wrapper {
+    position: relative; 
+    width: 500px;
+    height: auto;
+}

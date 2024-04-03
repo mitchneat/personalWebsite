@@ -1,0 +1,91 @@
+    #landing {
+        padding: 0 5rem; /* Adjust padding as needed */
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+        justify-content: space-between; /* Distribute items evenly along the main axis */
+    }
+    
+
+    .top-section {
+        display: flex; /* Set top-section as a flex container */
+        justify-content: space-between; /* Distribute child elements evenly */
+        align-items: center; /* Align items vertically */
+    }
+    .introContent {
+        flex: 1 1 50%;
+        max-width: 50%;
+        padding-right: 2rem;
+        display: flex;
+        flex-direction: column; /* Stack child elements vertically */
+        justify-content: center;
+    }
+    
+    .profileImg {
+        flex: 1; /* Allow profileImg to grow and take up available space */
+        max-width: 50%; /* Limit the width to 50% of the container */
+    }
+    .bg {
+        width: 100%; /* Ensure the image fills the available space */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover;
+    }
+    
+    
+    
+    .intro {
+        font-size: 2.5rem; /* Adjust font size as needed */
+        font-weight: 300;
+        /* color: #000;  */
+    }
+    
+
+    .hello{
+        font-size: 5rem;
+        font-weight: 200;
+        color: var(--primary-color);
+    }
+
+    .name{
+        color: rgb(96, 6, 185);
+    }
+
+    .aboutpg{
+        font-size: medium;
+        font-weight: 200;
+    }
+
+    /* @media screen and (max-width: 840px) {
+        .bg {
+            max-width: 100%; 
+        }
+    
+        .introContent {
+            padding-right: 0; 
+        }
+    } */
+    .about-section {
+        /* flex: 1; */
+        width: 100%;
+        margin-top: 4rem;
+        margin-bottom: 4rem; 
+        text-align: center;
+    }
+
+
+    .line {
+        border-top: 2px solid white;
+        display: inline-block;
+        width: 45%;
+        margin: 0 10px; 
+    }
+
+ 
+    h2 {
+        display: flex;
+        align-items: center; 
+        margin: 20px 0;
+    }
+
+    h2 span {
+        flex: none;
+    }
