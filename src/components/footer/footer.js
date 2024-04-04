@@ -6,7 +6,8 @@ const Footer = () => {
     return (
         <footer className='footer'>
                 <div className='center'>
-                    This is a work in progress if you would like to report any issues please see Contact Me.
+                    This is my first website from scratch and it is a work in progress.
+                    If you would like to report any issues please see Contact Me.
                 </div>
                 {/* <br/> */}
                 <div className='center'>

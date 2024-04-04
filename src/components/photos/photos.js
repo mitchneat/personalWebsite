@@ -22,32 +22,36 @@ const Photos = () => {
         <div className='image-page'>
 
             <Link to='/greece' className="image-link">
-                <img src={greece4} alt="Greece 4" className="image"/>
+                
                 <div className='image-wrapper'>
-                    <h2 className='title'>Greece</h2>
+                    <img src={greece4} alt="Greece 4" className="image"/>
                     <img src={greece2} alt="Greece 2" className="image"/>
-                    
+                    <div class="overlay-text">Greece</div>
+                    <img src={greece1} alt="Greece 1" className="image"/>
                 </div>
-                <img src={greece1} alt="Greece 1" className="image"/>
+                
             </Link>
 
             <Link to='/greece' className="image-link">
-                <img src={indo1} alt="Indo 1" className="image"/>
+                
                 <div className='image-wrapper'>
-                    <h2 className='title'>Indonesia</h2>
+                    <img src={indo1} alt="Indo 1" className="image"/>
                     <img src={indo2} alt="Indo 2" className="image"/>
-                    
+                    <div class="overlay-text">Indonesia</div>
+                    <img src={indo3} alt="Indo 3" className="image"/>
                 </div>
-                <img src={indo3} alt="Indo 3" className="image"/>
+                
             </Link>
 
             <Link to='/greece' className="image-link">
-                <img src={maine2} alt="maine2" className="image"/>
+                
                 <div className='image-wrapper'>
+                    <img src={maine2} alt="maine2" className="image"/>
                     <img src={maine1} alt="Maine 1" className="image"/>
-                    <h2 className='title'>Maine</h2>
+                    <div class="overlay-text">Maine</div>
+                    <img src={maine3} alt="Maine 3" className="image"/>
                 </div>
-                <img src={maine3} alt="Maine 3" className="image"/>
+                
             </Link>
 
 

@@ -11,7 +11,7 @@ const Landing = () => {
                 <div className="introContent">
                     <span className="hello">Hello,</span>
                     <span className="intro">I'm <span className="name">Mitch Neat</span> </span>
-                    <p  className="aboutpg">Thanks for coming to my website! To learn a little about me scroll down.<br/> Scroll down to learn more! </p>
+                    <p  className="aboutpg">Thanks for coming to my website, scroll down to learn a little about me! </p>
                 </div>
 
                 <div className="profileImg">
