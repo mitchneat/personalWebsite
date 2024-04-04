@@ -7,26 +7,39 @@ import Greece from "./components/greece/greece";
 import Contact from "./components/contact/contact";
 import Footer from "./components/footer/footer";
 import { Routes, Route } from "react-router-dom";
-
+import './App.css'; // Import your CSS file if you have one for additional styling
+import React, { useState, useEffect } from 'react';
 
 function App() {
+  const [hasOverflow, setHasOverflow] = useState(false);
+
+  useEffect(() => {
+    const content = document.querySelector('.content');
+    if (content.scrollHeight > window.innerHeight) {
+      setHasOverflow(true);
+    } else {
+      setHasOverflow(false);
+    }
+  }, []);
+
   return (
     <div className="App">
-      <Navbar/>
-      <div className="container">
-        <Routes>
-          <Route path="/" element={<Landing/>}/>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/photos" element={<Photos/>}/>
-          <Route path="/resume" element={<Resume/>}/>
-          <Route path="/greece" element={<Greece/>}/>
-          <Route path="/contact" element={<Contact/>}/>
-
-        </Routes>
-      </div>  
-      <Footer/>
+      <Navbar />
+      <div className={`content ${hasOverflow ? 'has-overflow' : ''}`}>
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/photos" element={<Photos />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/greece" element={<Greece />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+        {hasOverflow && <Footer />}
+      </div>
+      {!hasOverflow && <Footer />}
     </div>
-    
   );
 }
 

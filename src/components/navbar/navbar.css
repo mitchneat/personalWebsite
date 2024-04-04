@@ -32,11 +32,11 @@
 .desktopMenuListItem{
     margin: 1rem;
     cursor: pointer;
-    color: rgb(96, 6, 185);
+    color: rgb(154, 66, 242);
 }
 
 .desktopMenuListItem:hover{
-    color: rgb(96, 6, 185);
+    color: rgb(146, 57, 235);
     padding: 0.5rem;
     border-bottom: 3px solid rgb(96, 6, 185);
 }
