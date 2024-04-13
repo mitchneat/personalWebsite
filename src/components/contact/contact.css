@@ -5,3 +5,8 @@
     align-items: center;
     font-size: xx-large;
 }
+
+.text-center {
+    width: 100%; 
+    max-width: 300px;
+}

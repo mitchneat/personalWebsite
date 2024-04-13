@@ -1,0 +1,26 @@
+.image-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+  }
+.image-link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.image-link:hover {
+    filter: brightness(80%); 
+}
+
+
+.rectangle {
+    width: 400px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    background-color: rgb(201, 157, 236); /* Adjust color as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
