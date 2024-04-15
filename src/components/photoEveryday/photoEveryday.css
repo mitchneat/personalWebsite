@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     flex-direction: column;
 }
 
@@ -17,8 +17,7 @@
     /* flex: 1; */
     width: 75%;
     margin-top: 4rem;
-    margin-bottom: 4rem; 
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
     text-align: center;
 }
 
@@ -27,4 +26,14 @@
     display: inline-block;
     width: 45%;
     margin: 0 10px; 
+}
+
+@media screen and (max-width: 768px) {
+    .about-section {
+        /* flex: 1; */
+        width: 75%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
 }
