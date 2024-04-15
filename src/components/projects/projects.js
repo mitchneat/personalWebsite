@@ -13,13 +13,13 @@ const Projects = () => {
                 </div>  
             </Link>
 
-            <Link to='/photoEveryday' className="image-link">
+            <Link to='/comingSoon' className="image-link">
                 <div class="rectangle">
                     <p>Reciept Scanner and Price Analysis</p>
                 </div>  
             </Link>
 
-            <Link to='/photoEveryday' className="image-link">
+            <Link to='/comingSoon' className="image-link">
                 <div class="rectangle">
                     <p>Bird Tracker using Roboflow</p>
                 </div>  

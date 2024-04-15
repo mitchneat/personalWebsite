@@ -11,6 +11,7 @@ import './App.css'; // Import your CSS file if you have one for additional styli
 import React, { useState, useEffect } from 'react';
 import PhotoEveryday from "./components/photoEveryday/photoEveryday";
 import Projects from "./components/projects/projects";
+import ComingSoon from "./components/comingSoon/comingSoon";
 
 function App() {
   const [hasOverflow, setHasOverflow] = useState(false);
@@ -38,6 +39,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/photoEveryday" element={<PhotoEveryday />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/comingSoon" element={<ComingSoon />} />
           </Routes>
         </div>
         {hasOverflow && <Footer />}
