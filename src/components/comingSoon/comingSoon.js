@@ -6,15 +6,18 @@ const ComingSoon = () => {
     return (
         <div className='main'>
 
-            <h1>Project write up and exaples coming soon!</h1>
+            <h3>Project write up and</h3>
+            <h3>exaples coming soon!</h3>
 
-
-            <h1>How to contact me</h1>
-            <h3>Phone: 781-927-8680</h3>
-            <h3>Email: MitchANeat@gmail.com</h3>
-            <h3>LinkedIn: <a href="https://www.linkedin.com/in/mitchell-neat">Mitchell Neat</a></h3>
             <br/>
-            <h3>Direct form coming soon!</h3>
+
+            <h3>How to contact me</h3>
+            <br/>
+            <h4>Phone: 781-927-8680</h4>
+            <h4>Email: MitchANeat@gmail.com</h4>
+            <h4>LinkedIn: <a href="https://www.linkedin.com/in/mitchell-neat">Mitchell Neat</a></h4>
+            <br/>
+            <h4>Direct form coming soon!</h4>
 
 
         </div>

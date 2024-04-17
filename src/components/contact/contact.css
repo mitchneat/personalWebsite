@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: xx-large;
+    font-size: x-large;
     color: white
 }
 
@@ -16,3 +16,9 @@
     color: rgb(154, 66, 242);
     text-decoration: none;
   }
+
+@media screen and (max-width: 768px) {
+    .main{
+        font-size: medium;
+    }
+}

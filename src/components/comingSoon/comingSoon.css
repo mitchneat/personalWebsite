@@ -1,0 +1,24 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    color: white
+}
+
+.text-center {
+    width: 100%; 
+    max-width: 300px;
+}
+
+.main a {
+    color: rgb(154, 66, 242);
+    text-decoration: none;
+  }
+
+@media screen and (max-width: 768px) {
+    .main{
+        font-size: medium;
+    }
+}

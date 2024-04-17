@@ -43,3 +43,10 @@
   font-size: 2rem; 
   z-index: 2; 
 }
+
+@media screen and (max-width: 840px) {
+  .overlay-text{
+    font-size: 1.25rem; 
+  }
+        
+}
