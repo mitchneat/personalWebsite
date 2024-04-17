@@ -1,38 +1,106 @@
-.navbar{
+.navbar {
     background: rgb(30, 30, 30);
     height: 5rem;
-    width: 100vw;
-    /* max-width: 75rem; */
-    margin: 0 auto;
+    width: 100%;
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    position: sticky;
+    /* justify-content: space-between; */
+    /* position: sticky; */
     top: 0;
     z-index: 3;
+}
+
+.navbar-content-mobile{
+    display: none;    
 
 }
-.navbar-content {
-    max-width: 80rem; /* Limit content width */
-    width: 100%; /* Allow content to take full width of navbar */
-    margin: 0 auto; /* Center content horizontally */
+
+.logoMobile {
+    display: none;
+}
+
+.logo {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-.logo{
     object-fit: cover;
     height: 5rem;
     width: 5rem;
 }
 
+.mobileMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items vertically */
+}
+
+.mobileMenuItems {
+    display: none;
+    flex-direction: column;
+    align-items: center; /* Center items vertically */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(41, 41, 41);
+    z-index: 2;
+    transition: top 0.3s;
+}
+
+.mobileMenuItems.active {
+    top: 5rem; 
+    display: flex;
+}
+
+
+.mobileMenuItems.active + .content {
+    padding-top: calc(5rem + 100px); /* Adjust this value based on the height of your navbar and any additional padding/margin */
+}
+
+.mobileMenuItem {
+    padding: 0.5rem; /* Add padding for better touch area */
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Add transition for hover effect */
+}
+
+.mobileMenuItem:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Change background color on hover */
+}
+
+.desktopWrapper {
+    background: rgb(30, 30, 30);
+    height: 5rem;
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center items horizontally */
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.navbar-content-desktop {
+    width: 100%;
+    max-width: 80rem; /* Limit content to a maximum width */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.desktopMenu {
+    max-width: 80rem; /* Limit content width */
+    width: 100%; /* Allow content to take full width of navbar */
+    margin: 0 auto; /* Center content horizontally */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
 .desktopMenuListItem{
-    margin: 1rem;
+    /* margin: 1rem; */
     cursor: pointer;
     color: rgb(154, 66, 242);
+    margin-right: 20px;
 }
 
 .desktopMenuListItem:hover{
@@ -40,16 +108,60 @@
     padding: 0.5rem;
     border-bottom: 3px solid rgb(96, 6, 185);
 }
-
-/* .desktopMenuListItem:active{
-    color: rgb(229, 224, 235);
-    padding: 0.5rem;
-    border-bottom: 3px solid rgb(96, 6, 185);
-} */
 .desktopMenuBtn{
     background: white;
     padding: 0.5rem 1rem;
     border-radius: 2rem;
     margin: 1rem;
     cursor: pointer;
+}
+.mobileMenuBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgb(154, 66, 242);
+    font-size: 1rem;
+    display: none; /* Hide button for larger screens */
+}
+
+.extended-content {
+    padding-top: calc(12rem); 
+}
+
+
+/* Show mobile menu button for smaller screens */
+@media screen and (max-width: 768px) {
+    .desktopMenu {
+        display: none;
+    }
+
+    .mobileMenuBtn {
+        display: block; /* Show menu button for smaller screens */
+    }
+    /* .content {
+    padding-top: 5rem; 
+    } */
+    
+    .logoMobile {
+        display: flex;
+        object-fit: cover;
+        height: 5rem;
+        width: 5rem;
+    }
+   
+    .logo, .desktopMenuBtn{
+        display: none;
+    }
+
+    .navbar-content-mobile {
+        width: 100%; /* Allow content to take full width of navbar */
+        margin: 0 auto; /* Center content horizontally */
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+    }
+    
+    .desktopWrapper{
+        display: none;
+    }
 }
