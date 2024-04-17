@@ -19,10 +19,10 @@ const Landing = () => {
                 </div>
             </div>
             
-            <br/>
-            <br/>
-            <div className="about-section">
-                <h2><span class="line"></span> About <span class="line"></span></h2>
+            <div class="bottom-section">
+                <h2>About</h2>
+            </div>
+            <div className="paragraphsPart"> 
                 <p>I grew up south of Boston and absolutely love New England.
                     To get out of my comfort zone I attended Virginia Tech and studied Computational Modeling and Data Analytics with a concentration in Biological Sciences.
                     Since graduating in 2021 I have been working at JDSAT wearing any hat the small but rapidly growing company needs from me;
@@ -30,15 +30,13 @@ const Landing = () => {
                     Including my internships, I have worked in many different fields from solar energy, cyber security, research, insurance, and now Navy medicine.
                     This versatility has helped me develop into a well rounded programmer. 
                 </p>
-                <br/>
-                <p>
-                Out of the office you’ll find me skiing, hiking, fishing, playing pick up basketball or soccer, watching hockey (Go Bruins), 
+                <p>Out of the office you'll find me skiing, hiking, fishing, playing pick up basketball or soccer, watching hockey (Go Bruins), 
                 or finding some body of water to jump in. I love animals and am currently fostering my second dog right now. 
                 I also love traveling to explore new places, meet new people, and try new foods. 
                 My recent trips include skiing at Lake Tahoe this winter, skiing in Salt Lake City last winter, and trips to visit my sister in Indonesian and Thailand over the past year.
                 To see more about some of the cool adventures I have been on check out the travel tab up top!
                 </p>
-            </div>
+            </div>                
         </section>
     )
 }

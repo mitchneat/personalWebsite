@@ -1,8 +1,8 @@
     #landing {
-        padding: 0 5rem; /* Adjust padding as needed */
+        padding: 0 5rem; 
         display: flex;
-        flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
-        justify-content: space-between; /* Distribute items evenly along the main axis */
+        flex-wrap: wrap;
+        /* justify-content: space-between;  */
     }
     
 
@@ -63,29 +63,80 @@
             padding-right: 0; 
         }
     } */
-    .about-section {
-        /* flex: 1; */
-        width: 100%;
-        margin-top: 4rem;
-        margin-bottom: 4rem; 
-        text-align: center;
-    }
 
 
-    .line {
-        border-top: 2px solid white;
-        display: inline-block;
+    /* .line {
+        border-top: 2px solid blue;
+        justify-content: center;
         width: 45%;
         margin: 0 10px; 
-    }
+    } */
 
  
-    h2 {
+    /* h2 {
         display: flex;
         align-items: center; 
         margin: 20px 0;
+    } */
+
+    .bottom-section {
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        text-align: center;
+        position: relative; /* Position the pseudo-element relative to this container */
+    }
+    
+    .bottom-section::before,
+    .bottom-section::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: calc(50% - 50px); /* Set the width dynamically */
+        height: 2px;
+        background-color: white;
+    }
+    
+    .bottom-section::before {
+        left: 0;
+    }
+    
+    .bottom-section::after {
+        right: 0;
+    }
+    
+    h2 {
+        display: inline-block;
+        position: relative; 
+        z-index: 1; 
+        padding: 0 10px; 
+        /* transform: translateY(50%); */
+    }
+
+    .paragraphsPart{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+    /* .bottom-section{
+        margin-top: 4rem;
+        margin-bottom: 4rem; 
+        text-align: center; 
+    }
+
+    
+    .line{
+        display: inline-block;
+        width: 40%;
+        max-width: 50px; 
+        height: 2px;
+        background-color: blueviolet; 
+    }
+    
+    h2 {
+        margin: 20px 0; 
     }
 
     h2 span {
         flex: none;
-    }
+    } */
