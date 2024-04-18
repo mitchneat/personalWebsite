@@ -8,27 +8,27 @@ import Contact from "./components/contact/contact";
 import Footer from "./components/footer/footer";
 import { Routes, Route } from "react-router-dom";
 import './App.css'; // Import your CSS file if you have one for additional styling
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
 import PhotoEveryday from "./components/photoEveryday/photoEveryday";
 import Projects from "./components/projects/projects";
 import ComingSoon from "./components/comingSoon/comingSoon";
 
 function App() {
-  const [hasOverflow, setHasOverflow] = useState(false);
+  // const [hasOverflow, setHasOverflow] = useState(false);
 
-  useEffect(() => {
-    const content = document.querySelector('.content');
-    if (content.scrollHeight > window.innerHeight) {
-      setHasOverflow(true);
-    } else {
-      setHasOverflow(false);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const content = document.querySelector('.content');
+  //   if (content.scrollHeight > window.innerHeight) {
+  //     setHasOverflow(true);
+  //   } else {
+  //     setHasOverflow(false);
+  //   }
+  // }, []);
 
   return (
     <div className="App">
       <Navbar />
-      <div className={`content ${hasOverflow ? 'has-overflow' : ''}`}>
+      {/* <div className={`content ${hasOverflow ? 'has-overflow' : ''}`}> */}
         <div className="container">
           <Routes>
             <Route path="/" element={<Landing />} />
@@ -42,9 +42,12 @@ function App() {
             <Route path="/comingSoon" element={<ComingSoon />} />
           </Routes>
         </div>
-        {hasOverflow && <Footer />}
-      </div>
-      {!hasOverflow && <Footer />}
+        <div className="bottom-footer">
+          <Footer />
+        </div>
+        {/* {hasOverflow && <Footer />} */}
+      {/* </div> */}
+      {/* {!hasOverflow && <Footer />} */}
     </div>
   );
 }
