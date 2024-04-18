@@ -1,24 +1,4 @@
-.footer {
-    width: 100%;
-    height: auto; 
-    background: rgb(40, 40, 40);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: small;
-    font-weight: 300;
-    flex-direction: column;
-    flex-wrap: wrap;
-    position: fixed;
-    bottom: 0;
-    margin-top: auto;
-}
-
 .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center; 
     padding: 0 10px; 
 }
