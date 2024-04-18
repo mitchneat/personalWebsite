@@ -110,9 +110,9 @@
 }
 .desktopMenuBtn{
     background: white;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
     border-radius: 2rem;
-    margin: 1rem;
+    /* margin: 1rem; */
     cursor: pointer;
 }
 .mobileMenuBtn {
