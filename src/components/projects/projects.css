@@ -16,13 +16,72 @@
 }
 
 
-.rectangle {
-    width: 400px; /* Adjust width as needed */
-    height: 200px; /* Adjust height as needed */
-    background-color: rgb(196, 144, 231); /* Adjust color as needed */
+/* .rectangle {
+    width: 400px; 
+    height: 200px; 
+    background-color: rgb(196, 144, 231); 
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  } */
 
-  
+  .rectangle {
+    width: 400px; 
+    height: 200px; 
+    /* border: 2px solid black;  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px; 
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+}
+
+.logoimage {
+  /* Styles for images */
+  position: absolute;
+  width: calc(100% / 3); /* Adjust width to fit three images */
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the entire container */
+  filter: brightness(80%);
+}
+
+.logoimage:nth-child(1) {
+  left: 0;
+}
+
+.logoimage:nth-child(2) {
+  left: calc(100% / 3);
+}
+
+.logoimage:nth-child(3) {
+  left: calc(2 * (100% / 3));
+}
+.text-container {
+  /* Styles specific to containers with text */
+  background-color: rgb(196, 144, 231);   
+}
+
+.projoverlayText {
+  position: absolute; /* Position text absolutely */
+  top: 10%; /* Position text vertically centered */
+  color: white;
+
+}
+
+.logoimage1 {
+  /* Styles for images */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the entire container */
+  filter: brightness(80%);
+}
+
+.projectLabel{
+  color: white;
+}

@@ -11,13 +11,12 @@ const ComingSoon = () => {
 
             <br/>
 
-            <h3>How to contact me</h3>
+            <h3>To learn more about it now contact me!</h3>
             <br/>
             <h4>Phone: 781-927-8680</h4>
             <h4>Email: MitchANeat@gmail.com</h4>
             <h4>LinkedIn: <a href="https://www.linkedin.com/in/mitchell-neat">Mitchell Neat</a></h4>
-            <br/>
-            <h4>Direct form coming soon!</h4>
+
 
 
         </div>
