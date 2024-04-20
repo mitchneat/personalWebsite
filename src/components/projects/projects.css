@@ -19,7 +19,7 @@
 .rectangle {
     width: 400px; /* Adjust width as needed */
     height: 200px; /* Adjust height as needed */
-    background-color: rgb(201, 157, 236); /* Adjust color as needed */
+    background-color: rgb(196, 144, 231); /* Adjust color as needed */
     display: flex;
     justify-content: center;
     align-items: center;

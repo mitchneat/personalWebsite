@@ -12,23 +12,13 @@ import './App.css'; // Import your CSS file if you have one for additional styli
 import PhotoEveryday from "./components/photoEveryday/photoEveryday";
 import Projects from "./components/projects/projects";
 import ComingSoon from "./components/comingSoon/comingSoon";
+import Robocv from "./components/robocv/robocv";
 
 function App() {
-  // const [hasOverflow, setHasOverflow] = useState(false);
-
-  // useEffect(() => {
-  //   const content = document.querySelector('.content');
-  //   if (content.scrollHeight > window.innerHeight) {
-  //     setHasOverflow(true);
-  //   } else {
-  //     setHasOverflow(false);
-  //   }
-  // }, []);
 
   return (
     <div className="App">
       <Navbar />
-      {/* <div className={`content ${hasOverflow ? 'has-overflow' : ''}`}> */}
         <div className="container">
           <Routes>
             <Route path="/" element={<Landing />} />
@@ -40,14 +30,12 @@ function App() {
             <Route path="/photoEveryday" element={<PhotoEveryday />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/comingSoon" element={<ComingSoon />} />
+            <Route path="/robocv" element={<Robocv />} />
           </Routes>
         </div>
         <div className="bottom-footer">
           <Footer />
         </div>
-        {/* {hasOverflow && <Footer />} */}
-      {/* </div> */}
-      {/* {!hasOverflow && <Footer />} */}
     </div>
   );
 }

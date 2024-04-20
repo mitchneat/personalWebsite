@@ -99,14 +99,14 @@
 .desktopMenuListItem{
     /* margin: 1rem; */
     cursor: pointer;
-    color: rgb(154, 66, 242);
+    color: rgb(146, 57, 235);
     margin-right: 20px;
 }
 
 .desktopMenuListItem:hover{
     color: rgb(146, 57, 235);
     padding: 0.5rem;
-    border-bottom: 3px solid rgb(96, 6, 185);
+    border-bottom: 3px solid rgb(146, 57, 235);
 }
 .desktopMenuBtn{
     background: white;
@@ -119,7 +119,7 @@
     background: transparent;
     border: none;
     cursor: pointer;
-    color: rgb(154, 66, 242);
+    color: rgb(146, 57, 235);
     font-size: 1rem;
     display: none; /* Hide button for larger screens */
 }
