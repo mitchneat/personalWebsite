@@ -17,16 +17,19 @@
         padding-right: 2rem;
         display: flex;
         flex-direction: column; /* Stack child elements vertically */
-        justify-content: center;
+        /* justify-content: center; */
     }
     
     .profileImg {
-        flex: 1; /* Allow profileImg to grow and take up available space */
-        max-width: 50%; /* Limit the width to 50% of the container */
+        flex: 1; 
+        /* justify-content: end; */
+        /* max-width: 100%;  */
     }
     .bg {
-        width: 100%; /* Ensure the image fills the available space */
-        height: auto; /* Maintain aspect ratio */
+        width: 90%; 
+        margin-left: 10%;
+        /* justify-content: flex-end; */
+        /* height: auto; */
         object-fit: cover;
     }
     
@@ -34,7 +37,7 @@
     
     .intro {
         font-size: 2.5rem; /* Adjust font size as needed */
-        font-weight: 300;
+        font-weight: 200;
         /* color: #000;  */
     }
     
@@ -47,6 +50,7 @@
 
     .name{
         color: rgb(146, 57, 235);
+        font-weight: 300;
     }
 
     .aboutpg{
@@ -54,7 +58,7 @@
         font-weight: 200;
     }
 
-    /* @media screen and (max-width: 840px) {
+    @media screen and (max-width: 768px) {
         .bg {
             max-width: 100%; 
         }
@@ -62,7 +66,30 @@
         .introContent {
             padding-right: 0; 
         }
-    } */
+
+        .hello{
+            font-size: 2rem;
+            font-weight: 200;
+        }
+        .intro {
+            font-size: 1.5rem; 
+            font-weight: 100;
+        }
+        .name{
+            font-weight: 200;
+        }
+        #landing {
+            padding: 0 2rem; 
+        }
+        .aboutpg{
+            font-size: small;
+        }
+        .introContent {
+            max-width: 35%;
+            /* padding-right: 10px; */
+
+        }
+    }
 
 
     /* .line {

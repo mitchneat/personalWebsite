@@ -20,6 +20,9 @@ import { Link } from 'react-router-dom';
 const Photos = () => {
     return (
         <div className='image-page'>
+            <link rel="preload" href="../../assets/indo1.JPG" as="image"></link>
+            <link rel="preload" href="../../assets/indo2.JPG" as="image"></link>
+            <link rel="preload" href="../../assets/indo3.JPG" as="image"></link>
 
             <Link to='/greece' className="image-link">
                 

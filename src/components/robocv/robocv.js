@@ -1,8 +1,8 @@
 import React from 'react';
 import './robocv.css';
-import birdVid from '../../assets/birdVid1.mp4';
-import plot1 from '../../assets/plotout1.png';
-import plot2 from '../../assets/plotout2.png';
+import birdVid from '../../assets/robo5.mp4';
+import plot1 from '../../assets/plotout1v2.png';
+import plot2 from '../../assets/plotout2v2.png';
 
 const Robocv = () => {
     return (
