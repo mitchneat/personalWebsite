@@ -17,6 +17,8 @@
 }
 .image {
   max-width: 30%;
+  max-height: 100%;
+  object-fit: cover;
   height: auto;
   flex: 0 0 auto;
 }
@@ -41,6 +43,7 @@
   text-align: center;
   width: 100%; 
   font-size: 2rem; 
+  font-weight: 550;
   z-index: 2; 
 }
 
@@ -49,4 +52,15 @@
     font-size: 1.25rem; 
   }
         
+}
+
+.imageResizer {
+  width: 100%; /* Define a specific width for the image container */
+  /* height: 150px;  */
+  overflow: hidden; /* Ensure images are clipped if they exceed container dimensions */
+}
+
+.imageResizer img {
+  width: 100%; /* Ensure images fill the container horizontally */
+  height: auto; /* Allow images to scale proportionally */
 }

@@ -67,3 +67,12 @@ h2 {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+.plotimage {
+    width: 45%;
+}
+
+@media screen and (max-width: 768px) {
+    .plotimage{
+        width: 100%;
+    }
+}

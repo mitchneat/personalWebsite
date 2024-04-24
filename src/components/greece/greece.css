@@ -1,0 +1,20 @@
+
+.image-gallery {
+    text-align: center;
+}
+
+.gallery-text {
+    margin-bottom: 20px;
+}
+
+.imageGalcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imageGalPics {
+    /* width: 200px; */
+    /* height: auto; */
+    margin: 5px;
+}

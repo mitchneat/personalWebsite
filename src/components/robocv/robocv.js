@@ -45,8 +45,8 @@ const Robocv = () => {
                     outside the original video and more augmentations I am sure it would have performed better on these examples.
                 </p>
                 <div className='plots'>
-                    <img src={plot1} alt="plot 1" className="image"/>
-                    <img src={plot2} alt="plot 2" className="image"/>
+                    <img src={plot1} alt="plot 1" className="plotimage"/>
+                    <img src={plot2} alt="plot 2" className="plotimage"/>
                 </div>
                 <p> I created these plots quickly with matplot to illustrate the bird's interactions. The first plot shows a breakdown of bird type visits by hour.
                     I should note hour is a loose term as I randomly divided up the video for my proof of concept. The second plot shows which birds shared the feeder together.
