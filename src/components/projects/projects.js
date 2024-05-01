@@ -28,6 +28,12 @@ const Projects = () => {
 
             <Link to='/comingSoon' className="image-link">
             <div class="rectangle text-container">
+                    <p className='projectLabel'>Travel Tracker Dashboard</p>
+                </div>  
+            </Link>
+
+            <Link to='/comingSoon' className="image-link">
+            <div class="rectangle text-container">
                     <p className='projectLabel'>Reciept Scanner and Price Analysis</p>
                 </div>  
             </Link>
