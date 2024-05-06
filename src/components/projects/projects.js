@@ -1,14 +1,15 @@
 import React from 'react';
 import './projects.css';
 import { Link } from 'react-router-dom';
-import pic1 from '../../assets/photoStart.JPG';
-import pic3 from '../../assets/photoend1.JPG';
-import pic2 from '../../assets/photoend3.JPG';
+import pic1 from '../../assets/photoStart_resize.jpg';
+import pic3 from '../../assets/photoend1_resize.jpg';
+import pic2 from '../../assets/photoend3_resize.jpg';
 import pic4 from '../../assets/roboflowCover.png';
 
 const Projects = () => {
     return (
         <div className='image-page'>
+            {/*!!!!!!!!!!!!!!!!!all pictures have to be 16:9 asspect ratio!!!!!!!!!!!! */}
 
             <Link to='/photoEveryday' className="image-link">
                 <div class="rectangle image-container">
