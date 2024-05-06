@@ -6,38 +6,37 @@
 
 }
 
-
-
 .image-row {
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: center;
-    margin-left: 3%;
-    margin-right: 3%;
     max-height: 30%;
     gap: 10px;
-
-    /* max-width: 80%; */
 }
 
 .imageP, .imageL {
-    /* Add any styling you want for the images */
-    max-width: calc(20% - 10px); /* Set maximum width for each image */
-    height: auto; /* Ensure aspect ratio is maintained */
+    max-width: calc(20% - 10px); 
+    height: auto; 
 }
 
 .imageL {
-    max-width: calc(40% - 10px); /* Adjust width for landscape images */
+    max-width: calc(40% - 10px); 
 }
 
 
-/* TODO change space between pics when the screen is smaller */
 @media screen and (max-width: 768px) {
-    .image-row {
+
+    .image-gallery {
         gap: 5px;
     }
 
-    .image-gallery {
+    .imageP, .imageL {
+        max-width: calc(20% - 5px); 
+    }
+    .imageL {
+        max-width: calc(40% - 5px);
+    }
+
+    .image-row {
         gap: 5px;
     }
 }
