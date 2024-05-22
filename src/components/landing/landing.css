@@ -10,6 +10,7 @@
         display: flex; /* Set top-section as a flex container */
         justify-content: space-between; /* Distribute child elements evenly */
         align-items: center; /* Align items vertically */
+        height: 100vh; 
     }
     .introContent {
         flex: 1 1 50%;
@@ -31,6 +32,8 @@
         /* justify-content: flex-end; */
         /* height: auto; */
         object-fit: cover;
+        border-radius: 50px;
+        /* box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.1); */
     }
     
     
