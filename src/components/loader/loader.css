@@ -1,0 +1,58 @@
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(30, 30, 30);
+    z-index: 1000; 
+  }
+  
+  .logoload {
+    width: 50px;
+    animation: growLogo 2s forwards;
+  }
+  
+  @keyframes growLogo {
+    0% {
+      width: 50px;
+      opacity: 0;
+    }
+    100% {
+      width: 400px; 
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-100%);
+    }
+  }
+  
+  .hidden-content-load {
+    display: none; 
+    opacity: 0;
+  }
+  
+  .visible-content-load {
+    display: block;
+    opacity: 1;
+    animation: fadeIn 1s forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

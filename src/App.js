@@ -13,28 +13,32 @@ import PhotoEveryday from "./components/photoEveryday/photoEveryday";
 import Projects from "./components/projects/projects";
 import ComingSoon from "./components/comingSoon/comingSoon";
 import Robocv from "./components/robocv/robocv";
+import Loader from "./components/loader/loader";
 
 function App() {
 
   return (
     <div className="App">
-      <Navbar />
-        <div className="container">
-          <Routes>
-            <Route path="/" element={<Landing />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/photos" element={<Photos />} />
-            <Route path="/resume" element={<Resume />} />
-            <Route path="/greece" element={<Greece />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/photoEveryday" element={<PhotoEveryday />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/comingSoon" element={<ComingSoon />} />
-            <Route path="/robocv" element={<Robocv />} />
-          </Routes>
-        </div>
-        <div className="bottom-footer">
-          <Footer />
+      <Loader />
+      <div className="content2">
+        <Navbar />
+          <div className="container">
+            <Routes>
+              <Route path="/" element={<Landing />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/photos" element={<Photos />} />
+              <Route path="/resume" element={<Resume />} />
+              <Route path="/greece" element={<Greece />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/photoEveryday" element={<PhotoEveryday />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/comingSoon" element={<ComingSoon />} />
+              <Route path="/robocv" element={<Robocv />} />
+            </Routes>
+          </div>
+          <div className="bottom-footer">
+            <Footer />
+          </div>
         </div>
     </div>
   );
