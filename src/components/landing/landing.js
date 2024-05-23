@@ -11,7 +11,7 @@ const Landing = () => {
             <div className="top-section">
                 <div className="introContent">
                     <span className="hello">Hello,</span>
-                    <span className="intro">I'm <span className="name">Mitch Neat</span> </span>
+                    <span className="intro"> I'm <span className="name">Mitch Neat</span> </span>
                     <p  className="aboutpg">Thanks for coming to my website, scroll down to learn a little about me! </p>
                 </div>
 
