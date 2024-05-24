@@ -17,7 +17,7 @@
 
 
 
-.bottom-section {
+.bottom-section-robo {
     margin-top: 2rem;
     margin-bottom: 1rem;
     width: 100%;
@@ -25,8 +25,8 @@
     position: relative; /* Position the pseudo-element relative to this container */
 }
 
-.bottom-section::before,
-.bottom-section::after {
+.bottom-section-robo::before,
+.bottom-section-robo::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -35,11 +35,11 @@
     background-color: white;
 }
 
-.bottom-section::before {
+.bottom-section-robo::before {
     left: 0;
 }
 
-.bottom-section::after {
+.bottom-section-robo::after {
     right: 0;
 }
 
@@ -75,4 +75,11 @@ h2 {
     .plotimage{
         width: 100%;
     }
+    .projectPage{
+        padding: 0 2rem; 
+    }
+    .bottom-section-robo::before,
+    .bottom-section-robo::after {
+    width: calc(50% - 80px); /* Set the width dynamically */
+}
 }

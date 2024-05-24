@@ -68,18 +68,24 @@
     @media screen and (max-width: 768px) {
         .top-section{
             flex-direction: column;
-            justify-content: space-evenly;
+            /* justify-content: space-evenly; */
         }
         .bg {
             max-width: 100%; 
             margin-left: 0;
+            border-radius: 20px;
         }
+        
     
         .introContent,
         .profileImg {
+            padding-top: 6rem;
             flex: none;
             width: 100%;
         }
+        .top-section {
+            justify-content:flex-start
+          }
 
         /* .profileImg {
             display: flex;
@@ -121,7 +127,7 @@
         margin: 20px 0;
     } */
 
-    .bottom-section {
+    .bottom-section-land {
         margin-top: 4rem;
         margin-bottom: 1rem;
         width: 100%;
@@ -129,8 +135,8 @@
         position: relative; /* Position the pseudo-element relative to this container */
     }
     
-    .bottom-section::before,
-    .bottom-section::after {
+    .bottom-section-land::before,
+    .bottom-section-land::after {
         content: "";
         position: absolute;
         top: 50%;
@@ -139,11 +145,11 @@
         background-color: white;
     }
     
-    .bottom-section::before {
+    .bottom-section-land::before {
         left: 0;
     }
     
-    .bottom-section::after {
+    .bottom-section-land::after {
         right: 0;
     }
     

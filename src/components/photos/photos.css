@@ -1,5 +1,5 @@
 
-  .image-page {
+  .image-page-photo {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -47,9 +47,29 @@
   z-index: 2; 
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 768px) {
   .overlay-text{
     font-size: 1.25rem; 
+  }
+        
+}
+
+@media screen and (max-width: 500px) {
+  .overlay-text{
+    top: 5px; 
+    padding: 0px;
+    font-size: 0.75rem; 
+    
+  }
+
+  .image-wrapper{
+    gap: 5px;
+  }
+
+  .image-page-photo{
+    padding-top: 1rem;
+    padding: 0px;
+    gap: 5px;
   }
         
 }

@@ -13,7 +13,7 @@ const Robocv = () => {
                 This video does not contain audio tracks.
             </video>
 
-            <div class="bottom-section">
+            <div class="bottom-section-robo">
                 <h2>Inspiration</h2>
             </div>
             <div className="paragraphsPart2"> 
@@ -31,7 +31,7 @@ const Robocv = () => {
                     I cannot stress enough how simple this was to use and how incredibly impressed I am based on my prior experience creating computer vision models. 
                 </p>
             </div>
-            <div class="bottom-section">
+            <div class="bottom-section-robo">
                 <h2>Results</h2>
             </div>
             <div className="paragraphsPart2"> 

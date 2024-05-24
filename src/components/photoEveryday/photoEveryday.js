@@ -6,12 +6,12 @@ const PhotoED = () => {
   return (
 
     <div className='videoPage'>
-      <video className='videoPlayer' controls muted>
+      <video className='videoPlayerPE' controls muted>
           <source src={fullVid} type="video/mp4"/>
           This video does not contain audio tracks.
       </video>
 
-      <div class="bottom-section">
+      <div class="bottom-section-pe">
                 <h2>Details</h2>
       </div>
       <div className="paragraphsPart"> 

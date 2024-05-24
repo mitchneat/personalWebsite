@@ -20,7 +20,7 @@ const Landing = () => {
                 </div>
             </div>
             
-            <div class="bottom-section">
+            <div class="bottom-section-land">
                 <h2>About</h2>
             </div>
             <div className="paragraphsPart"> 

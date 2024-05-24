@@ -16,6 +16,14 @@ const Navbar = () => {
         }
     };
 
+    const closeMenu = () => {
+        setIsMobileMenuOpen(false);
+        const content = document.querySelector('.content');
+        if (content) {
+            content.classList.remove('extended-content');
+        }
+    };
+
     return (
         <nav className="navbar">
             <div className='navbar-content-mobile'>
@@ -23,11 +31,11 @@ const Navbar = () => {
                 <div className='mobileMenu'>
                     <button className='mobileMenuBtn' onClick={toggleMenu}>Menu</button>
                     <div className={`mobileMenuItems ${isMobileMenuOpen ? 'active' : ''}`}>
-                        <Link to='' className='mobileMenuItem'>Home</Link>
-                        <Link to='/projects' className='mobileMenuItem'>Projects</Link>
-                        <Link to='/photos' className='mobileMenuItem'>Travel</Link>
-                        <Link to='/resume' className='mobileMenuItem'>Resume</Link>
-                        <Link to='/contact' className='mobileMenuItem'>
+                        <Link to='' className='mobileMenuItem' onClick={closeMenu}>Home</Link>
+                        <Link to='/projects' className='mobileMenuItem' onClick={closeMenu}>Projects</Link>
+                        <Link to='/photos' className='mobileMenuItem' onClick={closeMenu}>Travel</Link>
+                        <Link to='/resume' className='mobileMenuItem' onClick={closeMenu}>Resume</Link>
+                        <Link to='/contact' className='mobileMenuItem' onClick={closeMenu}>
                             <button className='mobileMenuBtn'>
                                 <img src='' alt='' className='mobileMenuImg' /> Contact Me
                             </button>

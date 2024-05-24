@@ -32,7 +32,7 @@ const Photos = () => {
     // }, [src])
 
     return (
-        <div className='image-page'>
+        <div className='image-page-photo'>
             <Link to='/greece' className="image-link">
                 
                 <div className='image-wrapper'>
