@@ -1,6 +1,6 @@
 import React from 'react';
 import './resume.css';
-import resume from "../../assets/Mitchell_Neat_Resume.pdf";
+import resume from "../../assets/Mitch_Neat_Resume.pdf";
 // import { Document } from '@react-pdf/renderer';
 
 
