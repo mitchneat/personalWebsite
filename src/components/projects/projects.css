@@ -70,6 +70,7 @@
   position: absolute; /* Position text absolutely */
   top: 10%; /* Position text vertically centered */
   color: white;
+  font-weight: bold;
 
 }
 

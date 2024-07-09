@@ -1,0 +1,70 @@
+/* https://public.tableau.com/app/profile/dave.hagen/viz/Superstore_embedded_800x800/Overview */
+/* https://public.tableau.com/javascripts/api/tableau-2.min.js */
+/* https://public.tableau.com/app/profile/mitchell.neat/viz/Dunks2022ATHike/THEHike */
+/* https://public.tableau.com/javascripts/api/viz_v1.js */
+/* https://public.tableau.com/app/profile/mitchell.neat/viz/2022ATHikeDunk/THEHike */
+/* https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js */
+/* <noscript><a href='#'><img alt='Dunk Hikes the Appalachian TrailIn 2022 from Jun. 21 - Nov. 14 Dunk hiked the Appalachian Trail. Here is a visualization of what it took ' src='https://public.tableau.com/static/images/20/2022ATHikeDunk/THEHike/1_rss.png' style='border: none' /></a></noscript> */
+
+
+.tableauContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 80%; */
+  }
+  
+  .tableauPlaceholder {
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: 1525px;
+  }
+
+  .tableauViz {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0;
+    padding: 0;
+    border: none;
+    height: 100%;
+    width: 100%; /* You can adjust this width as needed */
+  }
+
+  .bottom-section-at {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+    position: relative; /* Position the pseudo-element relative to this container */
+}
+.bottom-section-at::before,
+.bottom-section-at::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: calc(50% - 55px); /* Set the width dynamically */
+    height: 2px;
+    background-color: white;
+}
+
+.bottom-section-at::before {
+    left: 0;
+}
+
+.bottom-section-at::after {
+    right: 0;
+}
+.writeUp{
+    padding: 5%;
+}
+
+@media screen and (max-width: 768px) {
+          
+      .tableauPlaceholder {
+        width: 90vw !important;
+      }
+  }

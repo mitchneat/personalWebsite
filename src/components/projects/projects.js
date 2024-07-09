@@ -5,13 +5,14 @@ import pic1 from '../../assets/photoStart_resize.jpg';
 import pic3 from '../../assets/photoend1_resize.jpg';
 import pic2 from '../../assets/photoend3_resize.jpg';
 import pic4 from '../../assets/roboflowCover.png';
+import AT from '../../assets/ATIcon.jpg';
 
 const Projects = () => {
     return (
         <div className='image-page'>
             {/*!!!!!!!!!!!!!!!!!all pictures have to be 16:9 asspect ratio!!!!!!!!!!!! */}
 
-            <Link to='/photoEveryday' className="image-link">
+            <Link to='/projects/photoEveryday' className="image-link">
                 <div class="rectangle image-container">
                         <img src={pic1} alt="pic1" className="logoimage"/>
                         <img src={pic3} alt="pic1" className="logoimage"/>
@@ -20,10 +21,17 @@ const Projects = () => {
                 </div>  
             </Link>
 
-            <Link to='/robocv' className="image-link">
+            <Link to='/projects/robocv' className="image-link">
                 <div class="rectangle image-container">
                     <img src={pic4} alt="pic1" className="logoimage1"/>
                     <p class='projoverlayText'>Roboflow CV Bird Identifier</p>
+                </div>  
+            </Link>
+
+            <Link to='/projects/hike' className="image-link">
+                <div class="rectangle text-container">
+                    <img src={AT} alt='picat' className='logoimage1'/>
+                    <p class='projoverlayText'>AT Tableau Dashboard</p>
                 </div>  
             </Link>
 

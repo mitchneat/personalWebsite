@@ -14,6 +14,7 @@ import Projects from "./components/projects/projects";
 import ComingSoon from "./components/comingSoon/comingSoon";
 import Robocv from "./components/robocv/robocv";
 import Loader from "./components/loader/loader";
+import HikeData from "./components/hikeData/hikeData";
 
 function App() {
 
@@ -30,10 +31,11 @@ function App() {
             <Route path="/resume" element={<Resume />} />
             <Route path="/greece" element={<Greece />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/photoEveryday" element={<PhotoEveryday />} />
+            <Route path="/projects/photoEveryday" element={<PhotoEveryday />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/comingSoon" element={<ComingSoon />} />
-            <Route path="/robocv" element={<Robocv />} />
+            <Route path="/projects/robocv" element={<Robocv />} />
+            <Route path="/projects/hike" element={<HikeData />} />
           </Routes>
         </div>
         <Footer className='footer'/>
