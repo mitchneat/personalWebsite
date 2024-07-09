@@ -1,0 +1,78 @@
+.resultsPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 0 5rem; 
+}
+
+.bottom-section-km {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+    position: relative; /* Position the pseudo-element relative to this container */
+}
+
+.bottom-section-km::before,
+.bottom-section-km::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: calc(50% - 55px); /* Set the width dynamically */
+    height: 2px;
+    background-color: white;
+}
+
+.bottom-section-km::before {
+    left: 0;
+}
+
+.bottom-section-km::after {
+    right: 0;
+}
+
+.imageGrid{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.tableDiv{
+    padding: 1rem;
+}
+
+.resultsPage .imagekm {
+    max-width: 75%; 
+    height: auto;
+  }
+
+  .imageContainer, .tableDiv{
+    text-align: center;
+  }
+
+.paragraphsPartPara{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .resultsPage .imagekm {
+        max-width: 100%; 
+        padding: 2px;
+      }
+      .imageGrid {
+        flex-direction: column; /* Change layout to column on smaller screens */
+        padding: 0rem;
+      }
+    
+      .imageContainer {
+        width: 100%; /* Ensure each image container takes full width */
+      }
+      .resultsPage{
+        padding: 1rem 2rem; 
+    }
+}
+
+  /* TODO increase max-width for smaller screens and decrease padding */

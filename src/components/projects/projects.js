@@ -6,6 +6,9 @@ import pic3 from '../../assets/photoend1_resize.jpg';
 import pic2 from '../../assets/photoend3_resize.jpg';
 import pic4 from '../../assets/roboflowCover.png';
 import AT from '../../assets/ATIcon.jpg';
+import parallel from '../../assets/parallel/computeCover.jpg';
+
+
 
 const Projects = () => {
     return (
@@ -35,6 +38,13 @@ const Projects = () => {
                 </div>  
             </Link>
 
+            <Link to='/projects/parallel' className="image-link">
+            <div class="rectangle text-container">
+                    <img src={parallel} alt='picat' className='logoimage1'/>
+                    <p className='projoverlayText'>Parallel Coding</p>
+                </div>  
+            </Link>
+
             <Link to='/comingSoon' className="image-link">
             <div class="rectangle text-container">
                     <p className='projectLabel'>Travel Tracker Dashboard</p>
@@ -59,11 +69,7 @@ const Projects = () => {
                 </div>  
             </Link>
 
-            <Link to='/comingSoon' className="image-link">
-            <div class="rectangle text-container">
-                    <p className='projectLabel'>Practice with parallel coding</p>
-                </div>  
-            </Link>
+            
 
 
         </div>
