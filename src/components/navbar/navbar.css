@@ -5,7 +5,7 @@
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
+    justify-content: center;
     /* position: sticky; */
     top: 0;
     z-index: 3;
@@ -22,9 +22,9 @@
 
 .logo {
     display: flex;
-    object-fit: cover;
-    height: 5rem;
-    width: 5rem;
+    object-fit: fill;
+    height: 3.5rem;
+    width: 3.5rem;
 }
 
 .mobileMenu {
@@ -68,44 +68,60 @@
 }
 
 .desktopWrapper {
-    background: rgb(30, 30, 30);
+    background: rgb(184, 183, 183, 0.95);
     height: 5rem;
-    width: 100%;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center items horizontally */
-    position: sticky;
+    width: 60%;
+    margin: 1% auto;
+    /* margin-left: 20%; */
+    /* margin-top: 1%; */
+    position: fixed;
     top: 0;
-    z-index: 3;
+    z-index: 1;
+    border-radius: 2rem;
+    border: 3px solid #f1f1f1;
+    filter: blur(1px);
 }
 
 .navbar-content-desktop {
-    width: 100%;
-    max-width: 80rem; /* Limit content to a maximum width */
+    width: 60%;
+    margin-top: 2%;
     display: flex;
+    padding: 1rem;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    z-index: 3;
+    position: fixed;
+    
 }
 
 .desktopMenu {
-    max-width: 80rem; /* Limit content width */
-    width: 100%; /* Allow content to take full width of navbar */
-    margin: 0 auto; /* Center content horizontally */
+    max-width: 80rem; 
+    width: 100%; 
     display: flex;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
 }
+.desktopMenuListItemContact {
+    display: inline-block; 
+    padding: 10px 20px; 
+    border-radius: 2rem; 
+    background-color: #f0f0f0; 
+    color: rgb(146, 57, 235);
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
 .desktopMenuListItem{
     /* margin: 1rem; */
     cursor: pointer;
     color: rgb(146, 57, 235);
     margin-right: 20px;
+    font-weight: bold;
 }
 
 .desktopMenuListItem:hover{
     color: rgb(146, 57, 235);
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     border-bottom: 3px solid rgb(146, 57, 235);
 }
 .desktopMenuBtn{
@@ -131,9 +147,7 @@
 
 /* Show mobile menu button for smaller screens */
 @media screen and (max-width: 768px) {
-    .desktopMenu {
-        display: none;
-    }
+    
 
     .mobileMenuBtn {
         display: block; /* Show menu button for smaller screens */
@@ -145,13 +159,11 @@
     .logoMobile {
         display: flex;
         object-fit: cover;
-        height: 5rem;
-        width: 5rem;
+        height: 4rem;
+        width: 4rem;
     }
    
-    .logo, .desktopMenuBtn{
-        display: none;
-    }
+    
 
     .navbar-content-mobile {
         width: 100%; /* Allow content to take full width of navbar */
@@ -159,9 +171,21 @@
         display: flex;
         align-items: center;
         justify-content:space-between;
+        margin-top: 2%;
+    }
+
+    .desktopMenu {
+        display: none;
+    }
+
+    .logo, .desktopMenuBtn{
+        display: none;
     }
     
     .desktopWrapper{
+        display: none;
+    }
+    .navbar-content-desktop{
         display: none;
     }
 }
