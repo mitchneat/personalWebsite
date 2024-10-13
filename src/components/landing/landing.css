@@ -2,6 +2,7 @@
         padding: 0 5rem; 
         display: flex;
         flex-wrap: wrap;
+        padding-bottom: 15rem;
     }
     
 
@@ -10,7 +11,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        height: 100vh;
+        height: 90vh;
       }
       
       .introContent {
@@ -110,6 +111,13 @@
         .aboutpg{
             font-size: small;
         }
+
+        .normalLayout, .reverseLayout {
+          flex-direction: column; /* Stack content vertically on mobile */
+        }
+        .aboutImages {
+          margin-top: 20px;
+        }
     }
 
 
@@ -188,3 +196,224 @@
     h2 span {
         flex: none;
     } */
+
+    .aboutTimeline {
+      display: flex;
+    }
+    
+    .sidebar {
+      position: fixed;
+      left: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+      z-index: 1000;
+    }
+
+    .sidebar.visible {
+      opacity: 1; 
+    }
+    
+    .line {
+      width: 4px;
+      background-color: #5c5b5c; 
+      position: absolute; 
+      left: 50%; 
+      transform: translateX(-50%); 
+      height: calc(30px * 5 + 10px * 4);
+    }    
+    
+    .circles {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+    }
+    
+    .circle {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      /* background-color: #5c5b5b; color is done in js file  */
+      transition: background-color 0.3s ease;
+    }
+
+    /* .circle.active {
+      background-color: #9239eb; color changed in code
+    } */
+    
+    
+    .AboutContent{
+      width: 100%;
+    }
+
+    div {
+      transition: background-color 0.5s ease; /* Smooth transition */
+    }
+
+    /* <img src={ME1} alt="Profile" className="abp1"/>
+                        <img src={ME1} alt="Profile" className="abp2"/>
+                        <img src={ME1} alt="Profile" className="abp3"/>
+                        <h2>About Section 1</h2 */
+
+    /* <div className="paragraphsPart"> 
+                    <p>I grew up south of Boston and absolutely love New England. To get out of my comfort zone I attended Virginia Tech and studied 
+                        Computational Modeling and Data Analytics with a concentration in Biological Sciences. Since graduating in 2021 I have been working for 
+                        JDSAT in a wide variety of roles, addressing the needs of this small but rapidly growing company. My responsibilities have included analytical work, 
+                        model development, dashboard design, frontend and backend development, and data engineering among others. Including my internships, 
+                        I have worked in many different fields from solar energy, cyber security, research, insurance, and now Navy medicine. 
+                        This versatility has helped me develop into a well rounded programmer.
+                    </p>
+                    <p>Out of the office, you'll often find me embracing the great outdoors, whether it's skiing, trekking through scenic trails, or casting a line while fishing. 
+                        I'm also an avid sports enthusiast, enjoying pick-up games of basketball or soccer whenever I can. As a devoted hockey fan (Go Bruins!), 
+                        I never miss a chance to catch a game. Additionally, I have a soft spot for animals and am currently fostering my second dog. 
+                        Traveling is another one of my greatest passions, where I relish exploring new destinations, meeting diverse people, and experiencing different cuisines. 
+                        Recent highlights include skiing in Lake Tahoe and Salt Lake City, as well as memorable trips to visit my sister in Indonesia and Thailand. 
+                        For more glimpses into my adventures, feel free to explore the travel tab above!
+
+                    </p>
+                </div>    */
+
+/* .aboutSectionContent {
+  max-width: 800px; 
+  margin: 0 auto; 
+  text-align: center; 
+} */
+
+
+.aboutPage {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  /* align-items: center; */
+  /* color: white;  */
+  /* background-size: cover; */
+  margin-bottom: 5rem;
+}
+
+
+
+.aboutSectionContent {
+  display: flex;
+  flex-grow: 1;
+  padding-right: 2rem;
+  padding-left: 7%;
+  /* flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+}
+
+
+.abTitle {
+  text-align: center;
+  width: 100%;
+  /* height: 5%; */
+  font-size: 2rem;
+
+  color: #fff;
+}
+
+.abpara {
+  flex: 1;
+  width: 50%;
+  font-size: 1.7rem;
+  color:rgb(146, 57, 235);
+}
+
+.normalLayout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reverseLayout {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+
+.abp {
+  width: 30%; 
+  height: auto;
+  border-radius: 10px; /* Add border-radius for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+}
+.aboutImages {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+.aboutImages .row {
+  display: flex; /* Use flexbox for each row */
+  /* flex: 1; */
+}
+
+.aboutImages.ab1 .row:first-child {
+  justify-content: space-evenly; /* Space between images in the first row */
+  width: 100%;
+  height: 30%;
+}
+
+.aboutImages.ab1 .row:nth-child(2) {
+  justify-content: center; 
+  width: 100%;
+}
+.aboutImages.ab1 .row:first-child img {
+  width: 45%;
+  /* height: auto;  */
+  margin: 10px;
+  object-fit: cover;
+}
+.aboutImages.ab1 .row:nth-child(2) img {
+  width: 60%;
+  /* height: auto;  */
+  margin: 10px;
+  object-fit: cover;
+}
+
+
+
+
+
+
+.aboutImages2 {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  height: 90vh;
+  /* gap: 10px; */
+}
+
+.row3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.rowSplit {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 2;
+}
+
+.abpLandscape {
+  width: 30vw; 
+  object-fit: cover;
+}
+
+.abpP {
+  width: 40vh; 
+  object-fit: cover;
+}

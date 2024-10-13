@@ -5,6 +5,7 @@
   "dependencies": {
     "@react-pdf/renderer": "^3.4.2",
     "blurhash": "^2.0.5",
+    "gsap": "^3.12.5",
     "ng2-image-lazy-load": "^2.0.9",
     "react": "^18.2.0",
     "react-blurhash": "^0.3.0",
@@ -12,6 +13,7 @@
     "react-lazyload": "^3.2.1",
     "react-router-dom": "^6.22.3",
     "react-scripts": "^5.0.1",
+    "react-scroll": "^1.9.0",
     "react-tableau": "^0.9.0",
     "react-tableau-embed": "^1.0.0",
     "tableau-api": "^2.2.3",
