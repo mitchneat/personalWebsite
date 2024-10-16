@@ -8,7 +8,7 @@ import ME1 from "../../assets/New England/fallBoston.JPG";
 import ME2 from "../../assets/New England/maine1_resize.jpg";
 import ME3 from "../../assets/New England/pic2_resize.jpg";
 
-import obx from "../../assets/Landing/obx.jpg";
+import obx from "../../assets/Landing/obx2.jpg";
 import football from "../../assets/Landing/football.jpg";
 import redsox from "../../assets/Landing/redsox.jpg";
 import dc from "../../assets/Landing/dc.jpg";
@@ -17,18 +17,18 @@ import grad from "../../assets/Landing/grad.jpg";
 import swed from "../../assets/Landing/Viking.JPG";
 import row from "../../assets/Landing/rowing1.jpg";
 
-import car from "../../assets/Landing/vette1.jpg";
+import car from "../../assets/Landing/vette3.jpg";
 import car2 from "../../assets/Landing/vette2.jpg";
 import vt from "../../assets/Landing/VT.jpg";
 import tahoe from "../../assets/Landing/tahoe.jpg";
-import hike from "../../assets/Landing/vahike.jpg";
+import hike from "../../assets/Landing/vahike2.jpg";
 import greatfalls from "../../assets/Landing/greatfalls.jpg";
 
 import indo from "../../assets/Landing/indo.JPG";
-import polo from "../../assets/Landing/polo.jpg";
+import polo from "../../assets/Landing/polo3.jpg";
 import utah from "../../assets/Landing/utah3.JPEG";
 import utah2 from "../../assets/Landing/utah2.JPG";
-import dalia from "../../assets/Landing/dalia.jpg";
+import dalia from "../../assets/Landing/dalia2.jpg";
 import thai from "../../assets/Landing/thailand.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -36,6 +36,10 @@ gsap.registerPlugin(ScrollTrigger);
 const Landing = () => {
   const [sidebarVisible, setSidebarVisible] = useState(false); // Track sidebar visibility
   const [currentSection, setCurrentSection] = useState(0);
+  const [titleColor, setTitleColor] = useState('white'); // State for text color
+  const [textColor, setTextColor] = useState('rgb(146, 57, 235)');
+  const [textShadow, setTextShadow] = useState('2px 2px 4px rgba(0, 0, 0, 0.5)');
+
 
   // Circle dimensions and spacing
   const circleHeight = 30; // Height of each circle
@@ -62,6 +66,29 @@ const Landing = () => {
           backgroundColor: newColor,
           duration: 0.1,
         });
+
+      // Change text color based on scroll progress
+      const newTitleColor = `rgb(${Math.floor(255 * (1 - Math.min(progress * 1.15, 1)))}, ${Math.floor(255 * (1 - Math.min(progress * 1.15, 1)))}, ${Math.floor(255 * (1 - Math.min(progress * 1.15, 1)))})`;
+      setTitleColor(newTitleColor);
+      
+
+      // Define your start and end colors for the text transition
+      const startColor = { r: 146, g: 57, b: 235 }; // Light purple
+      const endColor = { r: 55, g: 20, b: 87 }; // Dark purple
+
+      // Interpolate the color based on the scroll progress
+      const newTextColor = {
+        r: Math.floor(startColor.r + (endColor.r - startColor.r) * progress),
+        g: Math.floor(startColor.g + (endColor.g - startColor.g) * progress),
+        b: Math.floor(startColor.b + (endColor.b - startColor.b) * progress),
+      };
+
+      // Set the new text color
+      setTextColor(`rgb(${newTextColor.r}, ${newTextColor.g}, ${newTextColor.b})`);
+
+      const shadowIntensity = Math.max(0.5, 1 - progress); // Adjust the intensity based on progress
+      setTextShadow(`2px 2px 4px rgba(0, 0, 0, ${shadowIntensity})`);
+
       },
     });
 
@@ -78,8 +105,9 @@ const Landing = () => {
     
       // Update the active circle based on the current scroll position
       sections.forEach((section, index) => {
-        if (scrollPosition >= section.offsetTop - (windowHeight * 0.5) && 
-            scrollPosition < section.offsetTop + section.offsetHeight - (windowHeight * 0.5)) {
+        console.log(section);
+        console.log(index);
+        if (scrollPosition >= section.offsetTop - (windowHeight * 0.5) ) {
           setCurrentSection(index);
         }
       });
@@ -118,6 +146,14 @@ const Landing = () => {
       <div className="aboutTimeline">
         {sidebarVisible && (
           <div className={`sidebar ${sidebarVisible ? "visible" : ""}`}>
+
+            <Link to="landing" smooth={true} duration={500} className="house-icon">
+              <i className="fas fa-home"></i>
+            </Link>
+            {/* <div className="house-icon">
+              <i className="fas fa-home"></i>
+            </div> */}
+
             <div className="line" style={{ height: `${lineHeight}px` }}></div>
             <div className="circles">
               {Array.from({ length: totalCircles }, (_, index) => (
@@ -131,7 +167,7 @@ const Landing = () => {
                     className="circle"
                     id={`circle${index + 1}`}
                     style={{
-                      backgroundColor: index === currentSection ? '#9239eb' : '#5c5b5b',
+                      backgroundColor: index === currentSection ? '#9239eb' : '#000',
                       height: `${circleHeight}px`,
                       width: `${circleHeight}px`,
                     }}
@@ -144,10 +180,10 @@ const Landing = () => {
 
         <div className="AboutContent">
           <section className="aboutPage" id="about1">
-            <h2 className='abTitle'>Growing up south of Boston</h2>
+            <h2 className='abTitle c1'>Growing up south of Boston</h2>
             <div className="aboutSectionContent normalLayout">
                 {/* skier animation as you scroll */}
-                <p className='abpara'>
+                <p className='abpara topBody'>
                   I grew up south of Boston playing almost every sport but ended up following my family's tradition and taking up rowing throughout high school. 
                 </p>
                 <div className="aboutImages ab1">
@@ -163,10 +199,10 @@ const Landing = () => {
 
           </section>
           <section className="aboutPage" id="about2">
-            <h2 className='abTitle'>Exploring New England and Beyond</h2>
+            <h2 className='abTitle c1'>Exploring New England and Beyond</h2>
             <div className="aboutSectionContent reverseLayout">
                 {/* boat rowing in background as you scroll, other sports? save football for tech*/}
-                <p className='abpara'>
+                <p className='abpara topBody'>
                   I loved exploring Boston and the great outdoors New England has to offer through skiing, hiking, and every water activity I could. 
                   A few family trips outside the United States ignited an ever burning curiosity to travel and continue to experience new places, cuisine, cultures, and people. 
                 </p>
@@ -183,15 +219,15 @@ const Landing = () => {
             </div>
           </section>
           <section className="aboutPage" id="about3">
-            <h2 className='abTitle'>Graduating Virginia Tech</h2>
+            <h2 className='abTitle c3' style={{ color: textShadow }}>Graduating Virginia Tech</h2>
             <div className="aboutSectionContent normalLayout"> 
                 {/* books stacking animation as you scroll?, football being thrown */}
-                <p className='abpara'>
+                <p className='abpara bottomBody'>
                   I studied Computational Modeling and Data Analytics with a concentration in Biological Sciences. Through my coursework and various internships I developed a versatile skill set across frontend and backend development, model development, dashboard design, analytical work, and data engineering. Outside of the classroom, I had a great time exploring southwest Virginia and rooting for the Hokies with the friends I made along the way.
                 </p>
                 <div className="aboutImages2 ab2">
                   <div className="row3">
-                    <img src={vt} alt="ab4-1" className="abpLandscape" />
+                    <img src={vt} alt="ab4-1" className="abpLandscape2" />
                   </div>
                   <div className="rowSplit">
                     <img src={hike} alt="ab4-3" className="abpP" />
@@ -201,53 +237,71 @@ const Landing = () => {
             </div>
           </section>
           <section className="aboutPage" id="about4">
-            <h2 className='abTitle'>Moving to Arlington</h2>
+            <h2 className='abTitle c4'>Moving to Arlington</h2>
             <div className="aboutSectionContent reverseLayout"> 
-              
               {/* movig truck animation?, fireworks behind dc monument? - I don't know how these work yet */}
-              <p className='abpara'>
+              <p className='abpara bottomBody'>
                 After spending some time in my beloved New England, I moved to Arlington to be closer to my office as work transitioned to a hybrid environment.
                 At JDSAT, I've taken on a variety of roles, contributing to the needs of this small but rapidly growing company while continuing to sharpen my analytical and programming skills.
                 This has given me the opportunity to explore a new city and region of the country with my friends in this post-grad chapter of my life
               </p>
-              <div className="aboutImages">
-                  {/* pics of dc, outerbanks?*/}
-                  <img src={dc} alt="ab4-1" className="abp"/>
-                  <img src={obx} alt="ab4-2" className="abp"/>
-                  <img src={greatfalls} alt="ab4-3" className="abp"/>
-              </div>
+              <div className="aboutImages2 ab2">
+                  <div className="row3">
+                    <img src={obx} alt="ab4-1" className="abpLandscape" />
+                  </div>
+                  <div className="rowSplit">
+                    <img src={dc} alt="ab4-3" className="abpP" />
+                    <img src={greatfalls} alt="ab4-2" className="abpP" />
+                  </div>
+                </div>
             </div>
           </section>
-          <section className="aboutPage" id="about5">
-            <h2 className='abTitle'>What have I been up to recently? </h2>
-            <div className="aboutSectionContent normalLayout"> 
-              
-              {/* car spinning tires, puppy, plane taking off animations*/}
-              {/* add dog names below picutes of them */}
-              <p className='abpara'>
-                I visitied my sister traveling around the world in Thailand and Indonesia and spent winters skiing around Salt Lake City and Lake Tahoe.
-                I have also developed a passion for working on cars particularly an 88' Corvette I fixed up into a daily driver.
-                Missing the companionship of a four legged best friend, I have been fostering dogs through a local shelter.
-              </p>
-              <div className="aboutImages ab1">
-                  {/* utah skiing, indonesia, Dalia and Polo, the vette */}
-                  <div className="row">
-                    <img src={indo} alt="ab5-1" className="abp"/>
-                    <img src={thai} alt="ab5-5" className="abp"/>
-                  </div>
-                  <div className="row">
-                    <img src={utah2} alt="ab5-3" className="abp"/>  
-                    <img src={tahoe} alt="ab5-3" className="abp"/>
-                  </div>
-                  <div className="row">
-                    <img src={dalia} alt="ab5-4" className="abp"/>
-                    <img src={polo} alt="ab5-2" className="abp"/>
-                  </div>        
-                  <div className="row">
-                    <img src={car} alt="ab5-4" className="abp"/>
-                    <img src={car2} alt="ab5-2" className="abp"/>
-                  </div>                 
+          <section className="aboutPage Bottom" id="about5">
+            <h2 className='abTitle c4'>What have I been up to recently? </h2>
+            {/* car spinning tires, puppy, plane taking off animations*/}
+            {/* add dog names below picutes of them */}
+            <div className="aboutSectionBottom"> 
+
+              <div className="part1">
+                <p className='abpara2 bottomBody'>
+                  I visitied my sister traveling around the world in Thailand and Indonesia
+                </p>
+                <div className="pics">
+                    <img src={indo} alt="ab5-1" className="abpdouble"/>
+                    <img src={thai} alt="ab5-5" className="abpdouble"/>
+                </div>
               </div>
+
+              <div className="part1">              
+                <div className="pics">
+                    <img src={utah2} alt="ab5-3" className="abpdouble"/>  
+                    <img src={tahoe} alt="ab5-3" className="abpdouble"/>
+                </div>
+                <p className='abpara2 bottomBody'>
+                  I spent the winters skiing around Salt Lake City and Lake Tahoe
+                </p>
+              </div>
+
+              <div className="part1">
+                <p className='abpara2 bottomBody'>
+                  I have been fostering the best pups and my new four legged best friends
+                </p>
+                <div className="pics">
+                    <img src={dalia} alt="ab5-4" className="abpport"/>
+                    <img src={polo} alt="ab5-2" className="abpport"/>
+                </div> 
+              </div>
+
+              <div className="part1">
+                <div className="pics">
+                    <img src={car} alt="ab5-4" className="abpsingle"/>
+                    {/* <img src={car2} alt="ab5-2" className="abpdouble"/> */}
+                </div>
+                <p className='abpara2 bottomBody'>
+                  I have also developed a passion for working on cars particularly an 88' Corvette I fixed up into a daily driver
+                </p>
+              </div>
+              
             </div>
           </section>
         </div>
