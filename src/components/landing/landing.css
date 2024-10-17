@@ -66,94 +66,7 @@
         font-weight: 200;
     }
 
-    @media screen and (max-width: 768px) {
-        .top-section{
-            flex-direction: column;
-            /* justify-content: space-evenly; */
-        }
-        .bg {
-            max-width: 100%; 
-            margin-left: 0;
-            border-radius: 20px;
-        }
-        
     
-        .introContent,
-        .profileImg {
-            padding-top: 6rem;
-            flex: none;
-            width: 100%;
-        }
-        .top-section {
-            justify-content:flex-start
-          }
-
-        /* .profileImg {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          } */
-
-        .hello{
-            font-size: 2rem;
-            font-weight: 200;
-        }
-        .intro {
-            font-size: 1.5rem; 
-            font-weight: 100;
-        }
-        .name{
-            font-weight: 200;
-        }
-        #landing {
-            padding: 0 2rem; 
-        }
-        .aboutpg{
-            font-size: small;
-        }
-
-        .normalLayout, .reverseLayout {
-          flex-direction: column; 
-        }
-        .aboutImages {
-          margin-top: 20px;
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-        .abpara.topBody, .abpara.bottomBody, .abpara2.bottomBody {
-          flex: none;
-          font-size: 0.75rem;
-          text-align: center;
-          width: 100%;
-        }
-        .abTitle.abTitle{
-          font-size: 1rem;
-          width: 100%;
-          text-align: center;
-        }
-
-        .aboutSectionContent {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-        .row {
-          flex-direction: row; /* Ensure rows maintain their own layout */
-          justify-content: center; /* Center images in the row */
-          margin: 10px 0; /* Add spacing between rows */
-        }
-
-
-
-
-
-
-
-
-
-    }
 
 
     /* .line {
@@ -565,6 +478,7 @@
   display: flex;
   justify-content: space-around; /* Optional for spacing the images evenly */
   align-items: center; /* Center images vertically */
+  opacity: 1;
 }
 .abpdouble {
   width: 45%; 
@@ -583,4 +497,172 @@
   height: auto;
   border-radius: 10px; /* Add border-radius for rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.mobileImagesLayout{
+  display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .top-section{
+      flex-direction: column;
+      /* justify-content: space-evenly; */
+  }
+  .bg {
+      max-width: 100%; 
+      margin-left: 0;
+      border-radius: 20px;
+  }
+  
+
+  .introContent,
+  .profileImg {
+      padding-top: 6rem;
+      flex: none;
+      width: 100%;
+  }
+  .top-section {
+      justify-content:flex-start
+    }
+
+  /* .profileImg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    } */
+
+  .hello{
+      font-size: 2rem;
+      font-weight: 200;
+  }
+  .intro {
+      font-size: 1.5rem; 
+      font-weight: 100;
+  }
+  .name{
+      font-weight: 200;
+  }
+  #landing {
+      padding: 0 2rem; 
+  }
+  .aboutpg{
+      font-size: small;
+  }
+
+
+
+  
+  /* .normalLayout, .reverseLayout {
+    flex-direction: column; 
+  } */
+  .aboutImages {
+    display: none;
+    /* margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; */
+  }
+  .abpara.topBody, .abpara.bottomBody {
+    flex: none;
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+  .abTitle.abTitle{
+    font-size: 1.25rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .aboutSectionContent {
+    display: flex;
+    flex-grow: 1; 
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  .abpara2.bottomBody, .part1{
+    display: none;
+  }
+
+  
+  /* .row {
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0; 
+  }
+  .pics {
+    flex-direction: column; 
+    align-items: center; 
+  }
+  .rowSplit{
+    flex-direction: column;
+  }
+  .aboutImages.ab1 .row:first-child img {
+    width: 65%;
+  }
+  .aboutImages.ab1 .row:nth-child(2) img {
+    width: 65%;
+  } */
+
+  .row, .pics, .rowSplit, .row3 {
+    display: none;
+  }
+
+  .abpLandscape {
+    width: 65vw; 
+  }
+  
+  .abpP {
+    width: 35vw;
+  }
+  
+  
+  .abpLandscape2 {
+    width: 65vw; 
+  }
+  .mobileImagesLayout{
+    flex-direction: column; 
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    flex-grow: 1;
+  }
+  .aboutImages .ab1{
+    display: none;
+  }
+  .aboutImages2 .ab2{
+    display: none;
+  }
+  .abp{
+    width: 75%;
+  }
+  .mobileBottomText{
+    color:rgb(0, 0, 0);
+  }
+
+  .mblpt{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .abpdouble{
+    width: 80%;
+  }
+  .abpport{
+    width: 60%;
+  }
+  .abpsingle{
+    width: 80%;
+  }
+
+
+
+
 }

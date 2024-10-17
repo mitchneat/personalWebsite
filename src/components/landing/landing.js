@@ -195,6 +195,11 @@ const Landing = () => {
                       <img src={ME3} alt="ab1-3" className="abp" />
                   </div>
                 </div>
+                <div className="mobileImagesLayout">
+                  <img src={football} alt="ab1-1" className="abp" />
+                  <img src={row} alt="ab1-2" className="abp" />
+                  <img src={ME3} alt="ab1-3" className="abp" />
+                </div>
             </div>
 
           </section>
@@ -216,6 +221,11 @@ const Landing = () => {
                       <img src={ME2} alt="ab4-3" className="abp" />
                   </div>
                 </div>
+                <div className="mobileImagesLayout">
+                  <img src={redsox} alt="ab4-1" className="abp" />
+                  <img src={swed} alt="ab4-2" className="abp" />
+                  <img src={ME2} alt="ab4-3" className="abp" />
+                </div>
             </div>
           </section>
           <section className="aboutPage" id="about3">
@@ -233,6 +243,11 @@ const Landing = () => {
                     <img src={hike} alt="ab4-3" className="abpP" />
                     <img src={grad} alt="ab4-2" className="abpP" />
                   </div>
+                </div>
+                <div className="mobileImagesLayout">
+                  <img src={vt} alt="ab4-1" className="abpLandscape2" />
+                  <img src={hike} alt="ab4-3" className="abpP" />
+                  <img src={grad} alt="ab4-2" className="abpP" />
                 </div>
             </div>
           </section>
@@ -253,7 +268,12 @@ const Landing = () => {
                     <img src={dc} alt="ab4-3" className="abpP" />
                     <img src={greatfalls} alt="ab4-2" className="abpP" />
                   </div>
-                </div>
+              </div>
+              <div className="mobileImagesLayout">
+                <img src={obx} alt="ab4-1" className="abpLandscape" />
+                <img src={dc} alt="ab4-3" className="abpP" />
+                <img src={greatfalls} alt="ab4-2" className="abpP" />
+              </div>
             </div>
           </section>
           <section className="aboutPage Bottom" id="about5">
@@ -270,6 +290,7 @@ const Landing = () => {
                     <img src={indo} alt="ab5-1" className="abpdouble"/>
                     <img src={thai} alt="ab5-5" className="abpdouble"/>
                 </div>
+                
               </div>
 
               <div className="part1">              
@@ -300,6 +321,42 @@ const Landing = () => {
                 <p className='abpara2 bottomBody'>
                   I have also developed a passion for working on cars particularly an 88' Corvette I fixed up into a daily driver
                 </p>
+              </div>
+
+
+              <div className="mobileImagesLayout">
+                  <div className="mblpt">
+                    <p className='mobileBottomText'>
+                      I visitied my sister traveling around the world in Thailand and Indonesia
+                    </p>
+                    <img src={indo} alt="ab5-1" className="abpdouble"/>
+                    <img src={thai} alt="ab5-5" className="abpdouble"/>
+                  </div>
+                  
+                  <div className="mblpt">
+                    <p className='mobileBottomText'>
+                      I spent the winters skiing around Salt Lake City and Lake Tahoe
+                    </p>
+                    <img src={utah2} alt="ab5-3" className="abpdouble"/>  
+                    <img src={tahoe} alt="ab5-3" className="abpdouble"/>
+                  </div>
+
+                  <div className="mblpt">
+                    <p className='mobileBottomText'>
+                      I have been fostering the best pups and my new four legged best friends
+                    </p>
+                    <img src={dalia} alt="ab5-4" className="abpport"/>
+                    <img src={polo} alt="ab5-2" className="abpport"/>
+                  </div>
+
+                  <div className="mblpt">
+                    <p className='mobileBottomText'>
+                      I have also developed a passion for working on cars particularly an 88' Corvette I fixed up into a daily driver
+                    </p>
+                    <img src={car} alt="ab5-4" className="abpsingle"/>
+                  </div>                 
+                  
+              
               </div>
               
             </div>
