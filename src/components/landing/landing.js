@@ -4,11 +4,10 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "./landing.css";
 import me from "../../assets/me3.jpg";
-import ME1 from "../../assets/New England/fallBoston.JPG";
 import ME2 from "../../assets/New England/maine1_resize.jpg";
 import ME3 from "../../assets/New England/pic2_resize.jpg";
 
-import obx from "../../assets/Landing/obx2.jpg";
+import obx from "../../assets/Landing/obx.jpg";
 import football from "../../assets/Landing/football.jpg";
 import redsox from "../../assets/Landing/redsox.jpg";
 import dc from "../../assets/Landing/dc.jpg";
@@ -17,18 +16,16 @@ import grad from "../../assets/Landing/grad.jpg";
 import swed from "../../assets/Landing/Viking.JPG";
 import row from "../../assets/Landing/rowing1.jpg";
 
-import car from "../../assets/Landing/vette3.jpg";
-import car2 from "../../assets/Landing/vette2.jpg";
+import car from "../../assets/Landing/vette.jpg";
 import vt from "../../assets/Landing/VT.jpg";
 import tahoe from "../../assets/Landing/tahoe.jpg";
-import hike from "../../assets/Landing/vahike2.jpg";
+import hike from "../../assets/Landing/vahike.jpg";
 import greatfalls from "../../assets/Landing/greatfalls.jpg";
 
 import indo from "../../assets/Landing/indo.JPG";
-import polo from "../../assets/Landing/polo3.jpg";
-import utah from "../../assets/Landing/utah3.JPEG";
-import utah2 from "../../assets/Landing/utah2.JPG";
-import dalia from "../../assets/Landing/dalia2.jpg";
+import polo from "../../assets/Landing/polo.jpg";
+import utah2 from "../../assets/Landing/utah.JPG";
+import dalia from "../../assets/Landing/dalia.jpg";
 import thai from "../../assets/Landing/thailand.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -36,8 +33,8 @@ gsap.registerPlugin(ScrollTrigger);
 const Landing = () => {
   const [sidebarVisible, setSidebarVisible] = useState(false); // Track sidebar visibility
   const [currentSection, setCurrentSection] = useState(0);
-  const [titleColor, setTitleColor] = useState('white'); // State for text color
-  const [textColor, setTextColor] = useState('rgb(146, 57, 235)');
+  // const [titleColor, setTitleColor] = useState('white'); 
+  // const [textColor, setTextColor] = useState('rgb(146, 57, 235)');
   const [textShadow, setTextShadow] = useState('2px 2px 4px rgba(0, 0, 0, 0.5)');
 
 
@@ -67,24 +64,24 @@ const Landing = () => {
           duration: 0.1,
         });
 
-      // Change text color based on scroll progress
-      const newTitleColor = `rgb(${Math.floor(255 * (1 - Math.min(progress * 1.15, 1)))}, ${Math.floor(255 * (1 - Math.min(progress * 1.15, 1)))}, ${Math.floor(255 * (1 - Math.min(progress * 1.15, 1)))})`;
-      setTitleColor(newTitleColor);
+      // // Change text color based on scroll progress
+      // const newTitleColor = `rgb(${Math.floor(255 * (1 - Math.min(progress * 1.15, 1)))}, ${Math.floor(255 * (1 - Math.min(progress * 1.15, 1)))}, ${Math.floor(255 * (1 - Math.min(progress * 1.15, 1)))})`;
+      // setTitleColor(newTitleColor);
       
 
-      // Define your start and end colors for the text transition
-      const startColor = { r: 146, g: 57, b: 235 }; // Light purple
-      const endColor = { r: 55, g: 20, b: 87 }; // Dark purple
+      // // Define your start and end colors for the text transition
+      // const startColor = { r: 146, g: 57, b: 235 }; // Light purple
+      // const endColor = { r: 55, g: 20, b: 87 }; // Dark purple
 
-      // Interpolate the color based on the scroll progress
-      const newTextColor = {
-        r: Math.floor(startColor.r + (endColor.r - startColor.r) * progress),
-        g: Math.floor(startColor.g + (endColor.g - startColor.g) * progress),
-        b: Math.floor(startColor.b + (endColor.b - startColor.b) * progress),
-      };
+      // // Interpolate the color based on the scroll progress
+      // const newTextColor = {
+      //   r: Math.floor(startColor.r + (endColor.r - startColor.r) * progress),
+      //   g: Math.floor(startColor.g + (endColor.g - startColor.g) * progress),
+      //   b: Math.floor(startColor.b + (endColor.b - startColor.b) * progress),
+      // };
 
-      // Set the new text color
-      setTextColor(`rgb(${newTextColor.r}, ${newTextColor.g}, ${newTextColor.b})`);
+      // // Set the new text color
+      // setTextColor(`rgb(${newTextColor.r}, ${newTextColor.g}, ${newTextColor.b})`);
 
       const shadowIntensity = Math.max(0.5, 1 - progress); // Adjust the intensity based on progress
       setTextShadow(`2px 2px 4px rgba(0, 0, 0, ${shadowIntensity})`);
@@ -124,11 +121,9 @@ const Landing = () => {
       <section id="landing">
         <div className="top-section">
           <div className="introContent">
-            <span className="hello">Hello,</span>
-            <span className="intro">
-              {" "}
-              I'm <span className="name">Mitch Neat</span>{" "}
-            </span>
+            <span className="hello">Hello, I'm </span>
+            <span className="name">Mitch Neat  </span>
+            
             <p className="aboutpg">
               Thanks for coming to my website, scroll down to learn a little about me!
             </p>
@@ -232,7 +227,7 @@ const Landing = () => {
             <h2 className='abTitle c3' style={{ color: textShadow }}>Graduating Virginia Tech</h2>
             <div className="aboutSectionContent normalLayout"> 
                 {/* books stacking animation as you scroll?, football being thrown */}
-                <p className='abpara bottomBody'>
+                <p className='abpara topBody'>
                   I studied Computational Modeling and Data Analytics with a concentration in Biological Sciences. Through my coursework and various internships I developed a versatile skill set across frontend and backend development, model development, dashboard design, analytical work, and data engineering. Outside of the classroom, I had a great time exploring southwest Virginia and rooting for the Hokies with the friends I made along the way.
                 </p>
                 <div className="aboutImages2 ab2">
