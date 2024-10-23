@@ -32,14 +32,14 @@ const Projects = () => {
             </Link>
 
             <Link to='/projects/hike' className="image-link">
-                <div class="rectangle text-container">
+                <div class="rectangle image-container">
                     <img src={AT} alt='picat' className='logoimage1'/>
                     <p class='projoverlayText'>AT Tableau Dashboard</p>
                 </div>  
             </Link>
 
             <Link to='/projects/parallel' className="image-link">
-            <div class="rectangle text-container">
+            <div class="rectangle image-container">
                     <img src={parallel} alt='picat' className='logoimage1'/>
                     <p className='projoverlayText'>Parallel Coding</p>
                 </div>  
