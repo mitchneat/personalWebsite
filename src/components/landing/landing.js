@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "./landing.css";
-import me from "../../assets/me3.jpg";
+import me from "../../assets/me3_67resizefile.jpg";
 import ME2 from "../../assets/New England/maine1_resize.jpg";
 import ME3 from "../../assets/New England/pic2_resize.jpg";
 
@@ -224,7 +224,7 @@ const Landing = () => {
             </div>
           </section>
           <section className="aboutPage" id="about3">
-            <h2 className='abTitle c3' style={{ color: textShadow }}>Graduating Virginia Tech</h2>
+            <h2 className='abTitle c1' >Graduating Virginia Tech</h2>
             <div className="aboutSectionContent normalLayout"> 
                 {/* books stacking animation as you scroll?, football being thrown */}
                 <p className='abpara topBody'>
@@ -253,7 +253,7 @@ const Landing = () => {
               <p className='abpara bottomBody'>
                 After spending some time in my beloved New England, I moved to Arlington to be closer to my office as work transitioned to a hybrid environment.
                 At JDSAT, I've taken on a variety of roles, contributing to the needs of this small but rapidly growing company while continuing to sharpen my analytical and programming skills.
-                This has given me the opportunity to explore a new city and region of the country with my friends in this post-grad chapter of my life
+                This has given me the opportunity to explore a new city and region of the country with my friends in this post-grad chapter of my life.
               </p>
               <div className="aboutImages2 ab2">
                   <div className="row3">
@@ -279,7 +279,7 @@ const Landing = () => {
 
               <div className="part1">
                 <p className='abpara2 bottomBody'>
-                  I visitied my sister traveling around the world in Thailand and Indonesia
+                  I visitied my sister traveling around the world in Thailand and Indonesia.
                 </p>
                 <div className="pics">
                     <img src={indo} alt="ab5-1" className="abpdouble"/>
@@ -294,13 +294,13 @@ const Landing = () => {
                     <img src={tahoe} alt="ab5-3" className="abpdouble"/>
                 </div>
                 <p className='abpara2 bottomBody'>
-                  I spent the winters skiing around Salt Lake City and Lake Tahoe
+                  I spent the winters skiing around Salt Lake City and Lake Tahoe.
                 </p>
               </div>
 
               <div className="part1">
                 <p className='abpara2 bottomBody'>
-                  I have been fostering the best pups and my new four legged best friends
+                  I have been fostering the best pups and my new four legged best friends.
                 </p>
                 <div className="pics">
                     <img src={dalia} alt="ab5-4" className="abpport"/>
@@ -314,7 +314,7 @@ const Landing = () => {
                     {/* <img src={car2} alt="ab5-2" className="abpdouble"/> */}
                 </div>
                 <p className='abpara2 bottomBody'>
-                  I have also developed a passion for working on cars particularly an 88' Corvette I fixed up into a daily driver
+                  I have also developed a passion for working on cars particularly an 88' Corvette I fixed up into a daily driver.
                 </p>
               </div>
 
@@ -322,7 +322,7 @@ const Landing = () => {
               <div className="mobileImagesLayout">
                   <div className="mblpt">
                     <p className='mobileBottomText'>
-                      I visitied my sister traveling around the world in Thailand and Indonesia
+                      I visitied my sister traveling around the world in Thailand and Indonesia.
                     </p>
                     <img src={indo} alt="ab5-1" className="abpdouble"/>
                     <img src={thai} alt="ab5-5" className="abpdouble"/>
@@ -330,7 +330,7 @@ const Landing = () => {
                   
                   <div className="mblpt">
                     <p className='mobileBottomText'>
-                      I spent the winters skiing around Salt Lake City and Lake Tahoe
+                      I spent the winters skiing around Salt Lake City and Lake Tahoe.
                     </p>
                     <img src={utah2} alt="ab5-3" className="abpdouble"/>  
                     <img src={tahoe} alt="ab5-3" className="abpdouble"/>
@@ -338,7 +338,7 @@ const Landing = () => {
 
                   <div className="mblpt">
                     <p className='mobileBottomText'>
-                      I have been fostering the best pups and my new four legged best friends
+                      I have been fostering the best pups and my new four legged best friends.
                     </p>
                     <img src={dalia} alt="ab5-4" className="abpport"/>
                     <img src={polo} alt="ab5-2" className="abpport"/>
@@ -346,7 +346,7 @@ const Landing = () => {
 
                   <div className="mblpt">
                     <p className='mobileBottomText'>
-                      I have also developed a passion for working on cars particularly an 88' Corvette I fixed up into a daily driver
+                      I have also developed a passion for working on cars particularly an 88' Corvette I fixed up into a daily driver.
                     </p>
                     <img src={car} alt="ab5-4" className="abpsingle"/>
                   </div>                 
