@@ -35,7 +35,7 @@ const Landing = () => {
   const [currentSection, setCurrentSection] = useState(0);
   // const [titleColor, setTitleColor] = useState('white'); 
   // const [textColor, setTextColor] = useState('rgb(146, 57, 235)');
-  const [textShadow, setTextShadow] = useState('2px 2px 4px rgba(0, 0, 0, 0.5)');
+  // const [textShadow, setTextShadow] = useState('2px 2px 4px rgba(0, 0, 0, 0.5)');
 
 
   // Circle dimensions and spacing
@@ -83,8 +83,8 @@ const Landing = () => {
       // // Set the new text color
       // setTextColor(`rgb(${newTextColor.r}, ${newTextColor.g}, ${newTextColor.b})`);
 
-      const shadowIntensity = Math.max(0.5, 1 - progress); // Adjust the intensity based on progress
-      setTextShadow(`2px 2px 4px rgba(0, 0, 0, ${shadowIntensity})`);
+      // const shadowIntensity = Math.max(0.5, 1 - progress); // Adjust the intensity based on progress
+      // setTextShadow(`2px 2px 4px rgba(0, 0, 0, ${shadowIntensity})`);
 
       },
     });
