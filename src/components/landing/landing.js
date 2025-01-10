@@ -279,7 +279,7 @@ const Landing = () => {
 
               <div className="part1">
                 <p className='abpara2 bottomBody'>
-                  I visitied my sister traveling around the world in Thailand and Indonesia.
+                  I visitied my digital nomad sister in Thailand, Indonesia, and Costa Rica.
                 </p>
                 <div className="pics">
                     <img src={indo} alt="ab5-1" className="abpdouble"/>
@@ -294,7 +294,7 @@ const Landing = () => {
                     <img src={tahoe} alt="ab5-3" className="abpdouble"/>
                 </div>
                 <p className='abpara2 bottomBody'>
-                  I spent the winters skiing around Salt Lake City and Lake Tahoe.
+                  Also enjoying cold climates, I spent the winters skiing around Salt Lake City and Lake Tahoe.
                 </p>
               </div>
 
