@@ -44,7 +44,7 @@ const Photos = () => {
                 
             </Link>
 
-            <Link to='/comingSoon' className="image-link">
+            <Link to='/travel/Indonesia' className="image-link">
                 
                 <div className='image-wrapper'>
                     <img src={indo2} alt="Indo 1" className="image"/>
