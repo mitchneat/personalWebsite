@@ -16,6 +16,7 @@ import Robocv from "./components/robocv/robocv";
 import Loader from "./components/loader/loader";
 import HikeData from "./components/hikeData/hikeData";
 import Kmeans from "./components/kmeans/kmeans";
+import Indo from "./components/indo/indo"; 
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
             <Route path="/projects/robocv" element={<Robocv />} />
             <Route path="/projects/hike" element={<HikeData />} />
             <Route path="/projects/parallel" element={<Kmeans />} />
+            <Route path="/travel/Indonesia" element={<Indo />} />
           </Routes>
         </div>
         <Footer className='footer'/>

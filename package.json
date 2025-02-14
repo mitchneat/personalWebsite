@@ -5,6 +5,7 @@
   "dependencies": {
     "@react-pdf/renderer": "^3.4.2",
     "blurhash": "^2.0.5",
+    "dotenv": "^16.4.7",
     "gsap": "^3.12.5",
     "ng2-image-lazy-load": "^2.0.9",
     "react": "^18.2.0",
