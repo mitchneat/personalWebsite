@@ -15,11 +15,17 @@ import slc3 from '../../assets/SLC/bison_resize.jpg';
 import thai1 from '../../assets/Thailand/lake4_resize.jpg';
 import thai2 from '../../assets/Thailand/scuba1.jpg';
 import thai3 from '../../assets/Thailand/temple4_resize.jpg';
+import guat1 from '../../assets/Guatemala/lakeAtitlan_16by9.jpg';
+import guat2 from '../../assets/Guatemala/volcano_exp_16by9.jpeg';
+import guat3 from '../../assets/Guatemala/volcano_sunrise_16by9.jpg';
+import guat4 from '../../assets/Guatemala/antigua_16by9.jpg';
+
+
 import { Link } from 'react-router-dom';
 // import React, { useState, useEffect} from 'react';
 // import { Blurhash } from 'react-blurhash';
 
-
+// ------------------------------------  all photos 16:9 --------------------
 const Photos = () => {
     // const [imageLoaded, setImageLoaded] = useState(false)
 
@@ -33,13 +39,24 @@ const Photos = () => {
 
     return (
         <div className='image-page-photo'>
+
+            <Link to='/travel/Guatemala' className="image-link">
+                
+                <div className='image-wrapper'>
+                    <img src={guat4} alt="Guat 1" className="image"/>
+                    <img src={guat3} alt="Guat 2" className="image"/>                    
+                    <div class="overlay-text">Guatemala</div>
+                    <img src={guat1} alt="Guat 3" className="image"/>
+                </div>
+                
+            </Link>
             <Link to='/greece' className="image-link">
                 
                 <div className='image-wrapper'>
-                    <img src={greece4} alt="Greece 4" className="image"/>
+                    <img src={greece2} alt="Greece 4" className="image"/>
                     <img src={greece1} alt="Greece 2" className="image"/>                    
                     <div class="overlay-text">Greece</div>
-                    <img src={greece2} alt="Greece 1" className="image"/>
+                    <img src={greece4} alt="Greece 1" className="image"/>
                 </div>
                 
             </Link>

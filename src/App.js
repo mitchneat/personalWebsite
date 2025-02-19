@@ -17,6 +17,7 @@ import Loader from "./components/loader/loader";
 import HikeData from "./components/hikeData/hikeData";
 import Kmeans from "./components/kmeans/kmeans";
 import Indo from "./components/indo/indo"; 
+import Guatemala from "./components/guatemala/guatemala"; 
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
             <Route path="/projects/hike" element={<HikeData />} />
             <Route path="/projects/parallel" element={<Kmeans />} />
             <Route path="/travel/Indonesia" element={<Indo />} />
+            <Route path="/travel/Guatemala" element={<Guatemala />} />
           </Routes>
         </div>
         <Footer className='footer'/>
