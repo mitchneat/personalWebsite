@@ -16,7 +16,7 @@ import thai1 from '../../assets/Thailand/lake4_resize.jpg';
 import thai2 from '../../assets/Thailand/scuba1.jpg';
 import thai3 from '../../assets/Thailand/temple4_resize.jpg';
 import guat1 from '../../assets/Guatemala/lakeAtitlan_16by9.jpg';
-import guat2 from '../../assets/Guatemala/volcano_exp_16by9.jpeg';
+// import guat2 from '../../assets/Guatemala/volcano_exp_16by9.jpeg';
 import guat3 from '../../assets/Guatemala/volcano_sunrise_16by9.jpg';
 import guat4 from '../../assets/Guatemala/antigua_16by9.jpg';
 

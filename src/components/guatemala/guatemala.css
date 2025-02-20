@@ -1,0 +1,45 @@
+.blogPage {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+    gap: 10px;  
+}
+.title{
+    text-align: center;
+    font-size: clamp(3rem, 6vw, 7rem); 
+    /* font-weight: bold; */
+}
+.comments{
+    text-align: center;
+    margin: 0 auto;
+    width: 40%;
+}
+pictureRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* margin-bottom: 3vh;  */
+}
+.picture-box {
+    width: 20%;  /* The new text box also takes up 20% */
+    text-align: center;  
+    /* padding: 1vw;   */
+    font-size: small;
+}
+
+.imagegups {
+    width: 20%; 
+    height: auto; 
+}
+
+.imagegup {
+    width: 22.5%; 
+    height: auto; 
+}
+
+.imagegul {
+    width: 40%;
+    height: auto;  
+}
