@@ -118,7 +118,7 @@ const Guatemala = () => {
           {/* 2 text - transition to volcano*/}
           <div className='pictureRow'>
 
-            <div class="picture-box" style={{ width: "60%" }}>
+            <div className="picture-box" style={{ width: "60%" }}>
             <p>
               The next morning, we were up by 6 a.m. and headed to OX Adventures to begin our volcano trek.
               After a quick breakfast, we embarked on a long van ride through rolling hills that grew
@@ -175,7 +175,7 @@ const Guatemala = () => {
           {/* 5 text - about until morning*/}
           <div className='pictureRow'>
 
-            <div class="picture-box" style={{ width: "70%" }} >
+            <div className="picture-box" style={{ width: "70%" }} >
               <p>
               Exhausted and hungry, we stumbled back to base camp around 9:30, still able to watch the
               eruptions—now from a safer distance. Over a shared meal and drinks 
@@ -225,7 +225,7 @@ const Guatemala = () => {
           {/* 10 text - about going to pana*/}
           <div className='pictureRow'>
 
-            <div class="picture-box" style={{ width: "70%" }} >
+            <div className="picture-box" style={{ width: "70%" }} >
               <p>
               After a grueling descent, a long van ride, and another transfer to Panajachel, 
               we finally arrived at our beautiful Airbnb along Lake Atitlán — a perfect place to rest 
@@ -262,7 +262,7 @@ const Guatemala = () => {
           {/* 13 text - about going to san pedro*/}
           <div className='pictureRow'>
 
-            <div class="picture-box" style={{ width: "70%" }} >
+            <div className="picture-box" style={{ width: "70%" }} >
               <p>
               From there, we took a boat across the lake to San Pedro, where we spent more time 
               unwinding and immersing ourselves in the local culture—most notably by sampling every
@@ -283,7 +283,7 @@ const Guatemala = () => {
           {/* 15 text - about going to san juan*/}
           <div className='pictureRow'>
 
-            <div class="picture-box" style={{ width: "70%" }} >
+            <div className="picture-box" style={{ width: "70%" }} >
               <p>
               Whether it was from street food or from the water we 
               all got fairly sick - which only gave us more reason to slow down and take it easy. 
@@ -303,7 +303,7 @@ const Guatemala = () => {
 
           {/* 17 text - about going to san marcos*/}
           <div className='pictureRow'>
-            <div class="picture-box" style={{ width: "70%" }} >
+            <div className="picture-box" style={{ width: "70%" }} >
               <p>
                Later, I continued on to San Marcos
                while Bobby, still feeling unwell, headed back to rest. Each town had its 
@@ -327,7 +327,7 @@ const Guatemala = () => {
 
           {/* 19 text - final day*/}
           <div className='pictureRow'>
-            <div class="picture-box" style={{ width: "70%" }} >
+            <div className="picture-box" style={{ width: "70%" }} >
               <p>
               On my final day, I spent most of it relaxing, enjoying the calm of the lake.
               As the day came to a close, I watched as dusk rolled in and the lights from 

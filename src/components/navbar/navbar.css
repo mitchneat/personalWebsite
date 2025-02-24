@@ -1,12 +1,12 @@
 .navbar {
-    background: rgb(30, 30, 30);
+    /* background: rgb(30, 30, 30); */
     height: 5rem;
     width: 100%;
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* position: sticky; */
+    position: absolute;
     top: 0;
     z-index: 3;
 }
@@ -72,14 +72,13 @@
     height: 5rem;
     width: 60%;
     margin: 1% auto;
-    /* margin-left: 20%; */
-    /* margin-top: 1%; */
     position: fixed;
     top: 0;
     z-index: 1;
     border-radius: 2rem;
     border: 3px solid #f1f1f1;
     filter: blur(1px);
+    pointer-events: none;
 }
 
 .navbar-content-desktop {
@@ -88,7 +87,6 @@
     display: flex;
     padding: 1rem;
     align-items: center;
-    /* justify-content: space-between; */
     z-index: 3;
     position: fixed;
     

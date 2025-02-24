@@ -1,5 +1,6 @@
 .background{
     background-color: tan;
+    padding-top: calc(5rem + 2%); 
 }
 .blogPage {
     display: flex;
@@ -50,7 +51,7 @@
     /* font-family: "Poppins", serif; */
 }
 .picture-box p{
-    font-family: 'Prompt', sans-serif; 
+    font-family: "Poppins", serif;
     font-size: clamp(1rem, 1vw, 5rem); 
 }
 

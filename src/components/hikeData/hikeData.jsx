@@ -45,7 +45,7 @@ const TableauDashboard = () => {
   };
 
   return (
-    <div>
+    <div className='bg_padding'> 
       {/* <h1>Tableau Dashboard made for my dad's hike of the appalachian trail in 2022</h1> */}
       <div className='tableauContainer' ref={tableauRef} dangerouslySetInnerHTML={{ __html: `
         <div className='tableauPlaceholder' >

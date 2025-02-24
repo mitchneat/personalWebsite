@@ -5,6 +5,7 @@
     align-items: center;
     font-size: x-large;
     color: white;
+    padding: calc(5rem + 2%); 
 }
 
 .text-center {
