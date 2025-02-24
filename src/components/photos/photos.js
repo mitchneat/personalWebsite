@@ -45,7 +45,7 @@ const Photos = () => {
                 <div className='image-wrapper'>
                     <img src={guat4} alt="Guat 1" className="image"/>
                     <img src={guat3} alt="Guat 2" className="image"/>                    
-                    <div class="overlay-text">Guatemala</div>
+                    <div className="overlay-text">Guatemala</div>
                     <img src={guat1} alt="Guat 3" className="image"/>
                 </div>
                 
@@ -55,7 +55,7 @@ const Photos = () => {
                 <div className='image-wrapper'>
                     <img src={greece2} alt="Greece 4" className="image"/>
                     <img src={greece1} alt="Greece 2" className="image"/>                    
-                    <div class="overlay-text">Greece</div>
+                    <div className="overlay-text">Greece</div>
                     <img src={greece4} alt="Greece 1" className="image"/>
                 </div>
                 
@@ -66,7 +66,7 @@ const Photos = () => {
                 <div className='image-wrapper'>
                     <img src={indo2} alt="Indo 1" className="image"/>
                     <img src={indo1} alt="Indo 2" className="image"/>
-                    <div class="overlay-text">Indonesia</div>
+                    <div className="overlay-text">Indonesia</div>
                     <img src={indo3} alt="Indo 3" className="image"/>
                 </div>
                 
@@ -77,7 +77,7 @@ const Photos = () => {
                 <div className='image-wrapper'>
                     <img src={slc2} alt="slc1" className="image"/>
                     <img src={slc3} alt="slc2" className="image"/>
-                    <div class="overlay-text">Salt Lake City</div>
+                    <div className="overlay-text">Salt Lake City</div>
                     <img src={slc1} alt="slc3" className="image"/>
                 </div>
                 
@@ -88,7 +88,7 @@ const Photos = () => {
                 <div className='image-wrapper'>
                     <img src={thai1} alt="thai1" className="image"/>
                     <img src={thai2} alt="thai2" className="image"/>
-                    <div class="overlay-text">Thailand</div>
+                    <div className="overlay-text">Thailand</div>
                     <img src={thai3} alt="thai3" className="image"/>
                 </div>
                 
@@ -99,7 +99,7 @@ const Photos = () => {
                 <div className='image-wrapper'>
                     <img src={maine2} alt="maine2" className="image"/>
                     <img src={maine3} alt="Maine 1" className="image"/>
-                    <div class="overlay-text">New England</div>
+                    <div className="overlay-text">New England</div>
                     <img src={maine1} alt="Maine 3" className="image"/>
                 </div>
                 
