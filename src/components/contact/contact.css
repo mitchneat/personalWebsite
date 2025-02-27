@@ -1,10 +1,11 @@
-.main{
+.mainC{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: x-large;
     color: white;
+    padding: calc(5rem + 2%) 0; 
 }
 
 .text-center {
@@ -12,13 +13,20 @@
     max-width: 300px;
 }
 
-.main a {
+.mainC a {
     color: rgb(146, 57, 235);
     text-decoration: none;
   }
 
 @media screen and (max-width: 768px) {
-    .main{
+    .mainC{
         font-size: medium;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .mainC{
+        font-size: small;
+        padding: calc(7rem + 2%) 0;
     }
 }

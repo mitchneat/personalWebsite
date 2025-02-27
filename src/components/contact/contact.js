@@ -4,7 +4,7 @@ import './contact.css';
 
 const Contact = () => {
     return (
-        <div className='main'>
+        <div className='mainC'>
             <h1>How to contact me</h1>
             <h3>Phone: 781-927-8680</h3>
             <h3>Email: MitchANeat@gmail.com</h3>

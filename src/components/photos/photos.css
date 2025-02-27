@@ -3,7 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
+    padding-top: calc(5rem + 2%); 
     gap: 10px;
   }
 .image-link {
@@ -67,8 +67,7 @@
   }
 
   .image-page-photo{
-    padding-top: 1rem;
-    padding: 0px;
+    padding-top: calc(5rem + 2%); 
     gap: 5px;
   }
         

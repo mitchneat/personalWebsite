@@ -102,8 +102,8 @@ const Landing = () => {
     
       // Update the active circle based on the current scroll position
       sections.forEach((section, index) => {
-        console.log(section);
-        console.log(index);
+        // console.log(section);
+        // console.log(index);
         if (scrollPosition >= section.offsetTop - (windowHeight * 0.5) ) {
           setCurrentSection(index);
         }

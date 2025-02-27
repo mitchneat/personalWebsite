@@ -6,6 +6,9 @@
 /* https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js */
 /* <noscript><a href='#'><img alt='Dunk Hikes the Appalachian TrailIn 2022 from Jun. 21 - Nov. 14 Dunk hiked the Appalachian Trail. Here is a visualization of what it took ' src='https://public.tableau.com/static/images/20/2022ATHikeDunk/THEHike/1_rss.png' style='border: none' /></a></noscript> */
 
+.bg_padding{
+  padding: calc(5rem + 2%) 0; 
+}
 
 .tableauContainer {
     display: flex;

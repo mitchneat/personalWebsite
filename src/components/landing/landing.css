@@ -1,8 +1,9 @@
     #landing {
-        padding: 0 5rem; 
+        padding: 5rem 5rem; 
         display: flex;
         flex-wrap: wrap;
-        padding-bottom: 15rem;
+        padding-bottom: 5rem;
+        background: rgb(30, 30, 30);
     }
     
 

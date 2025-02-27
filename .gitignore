@@ -18,6 +18,13 @@
 .env.test.local
 .env.production.local
 
+# env vars
+.env
+
+# AWS creds
+~/.aws/credentials
+
+# pics
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

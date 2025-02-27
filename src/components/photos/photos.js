@@ -15,11 +15,18 @@ import slc3 from '../../assets/SLC/bison_resize.jpg';
 import thai1 from '../../assets/Thailand/lake4_resize.jpg';
 import thai2 from '../../assets/Thailand/scuba1.jpg';
 import thai3 from '../../assets/Thailand/temple4_resize.jpg';
+
+
+
 import { Link } from 'react-router-dom';
+
+import mediaData from '../../assets/Media/travelPage.json'
+
+const media = mediaData.map(item => item.url); 
 // import React, { useState, useEffect} from 'react';
 // import { Blurhash } from 'react-blurhash';
 
-
+// ------------------------------------  all photos 16:9 --------------------
 const Photos = () => {
     // const [imageLoaded, setImageLoaded] = useState(false)
 
@@ -33,13 +40,24 @@ const Photos = () => {
 
     return (
         <div className='image-page-photo'>
+
+            <Link to='/travel/Guatemala' className="image-link">
+                
+                <div className='image-wrapper'>
+                    <img src={media[0]} alt="Guat 1" className="image"/>
+                    <img src={media[2]} alt="Guat 2" className="image"/>                    
+                    <div className="overlay-text">Guatemala</div>
+                    <img src={media[1]} alt="Guat 3" className="image"/>
+                </div>
+                
+            </Link>
             <Link to='/greece' className="image-link">
                 
                 <div className='image-wrapper'>
-                    <img src={greece4} alt="Greece 4" className="image"/>
+                    <img src={greece2} alt="Greece 4" className="image"/>
                     <img src={greece1} alt="Greece 2" className="image"/>                    
-                    <div class="overlay-text">Greece</div>
-                    <img src={greece2} alt="Greece 1" className="image"/>
+                    <div className="overlay-text">Greece</div>
+                    <img src={greece4} alt="Greece 1" className="image"/>
                 </div>
                 
             </Link>
@@ -49,7 +67,7 @@ const Photos = () => {
                 <div className='image-wrapper'>
                     <img src={indo2} alt="Indo 1" className="image"/>
                     <img src={indo1} alt="Indo 2" className="image"/>
-                    <div class="overlay-text">Indonesia</div>
+                    <div className="overlay-text">Indonesia</div>
                     <img src={indo3} alt="Indo 3" className="image"/>
                 </div>
                 
@@ -60,7 +78,7 @@ const Photos = () => {
                 <div className='image-wrapper'>
                     <img src={slc2} alt="slc1" className="image"/>
                     <img src={slc3} alt="slc2" className="image"/>
-                    <div class="overlay-text">Salt Lake City</div>
+                    <div className="overlay-text">Salt Lake City</div>
                     <img src={slc1} alt="slc3" className="image"/>
                 </div>
                 
@@ -71,7 +89,7 @@ const Photos = () => {
                 <div className='image-wrapper'>
                     <img src={thai1} alt="thai1" className="image"/>
                     <img src={thai2} alt="thai2" className="image"/>
-                    <div class="overlay-text">Thailand</div>
+                    <div className="overlay-text">Thailand</div>
                     <img src={thai3} alt="thai3" className="image"/>
                 </div>
                 
@@ -82,7 +100,7 @@ const Photos = () => {
                 <div className='image-wrapper'>
                     <img src={maine2} alt="maine2" className="image"/>
                     <img src={maine3} alt="Maine 1" className="image"/>
-                    <div class="overlay-text">New England</div>
+                    <div className="overlay-text">New England</div>
                     <img src={maine1} alt="Maine 3" className="image"/>
                 </div>
                 

@@ -1,0 +1,114 @@
+.background{
+    background-color: tan;
+    padding-top: calc(5rem + 2%); 
+    padding-bottom: 5rem;
+}
+.blogPage {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+    gap: 10px;  
+    
+}
+.titleblock {
+    position: relative;
+    display: inline-block;
+}
+
+.title{
+    font-size: clamp(3rem, 6vw, 7rem); 
+    font-family: "Amatic SC", serif;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+.comments{
+    text-align: center;
+    margin: 0 auto;
+    width: 40%;
+}
+.pictureRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* margin-bottom: 3vh;  */
+}
+.picture-box {
+      /* The new text box also takes up 20% */
+    text-align: center;  
+    padding: 1vw;  
+    font-size: small;
+    /* font-family: 'Prompt', sans-serif; */
+    /* font-family: "Poppins", serif; */
+}
+.picture-box p{
+    font-family: "Poppins", serif;
+    font-size: clamp(1rem, 1vw, 5rem); 
+}
+
+.imagegups {
+    width: 20%; 
+    height: auto; 
+}
+
+.imagegup {
+    width: 22.5%; 
+    height: auto; 
+}
+
+.imagegup2 {
+    width: 16.875%; 
+    height: auto; 
+}
+
+.imagegul {
+    width: 40%;
+    height: auto;  
+}
+.imagegu_sq{
+    width: 100%;
+    height: auto;  
+}
+.stacked{
+    width: 14.75%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Show mobile menu button for smaller screens */
+@media screen and (max-width: 768px) {
+    .picture-box p{
+        font-family: "Poppins", serif;
+        font-size: clamp(0.5rem, 0.5vw, 2rem); 
+    }
+
+    .picture-box { 
+      padding: 0.5vw;  
+  }
+
+  .blogPage {
+    gap: 5px;  
+    
+}
+.pictureRow {
+    gap: 5px;
+}
+}
