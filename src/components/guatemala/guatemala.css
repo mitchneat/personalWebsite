@@ -1,6 +1,7 @@
 .background{
     background-color: tan;
     padding-top: calc(5rem + 2%); 
+    padding-bottom: 5rem;
 }
 .blogPage {
     display: flex;
@@ -23,9 +24,7 @@
 }
 .title{
     font-size: clamp(3rem, 6vw, 7rem); 
-    /* font-weight: bold; */
-    /* font-family: 'Prompt', sans-serif; */
-    font-family: "Permanent Marker", serif;
+    font-family: "Amatic SC", serif;
     position: relative;
     text-align: center;
     z-index: 2;
@@ -65,6 +64,11 @@
     height: auto; 
 }
 
+.imagegup2 {
+    width: 16.875%; 
+    height: auto; 
+}
+
 .imagegul {
     width: 40%;
     height: auto;  
@@ -74,7 +78,7 @@
     height: auto;  
 }
 .stacked{
-    width: 14%;
+    width: 14.75%;
     display: flex;
     flex-direction: column;
     gap: 10px;

@@ -1,91 +1,12 @@
 import React from 'react';
 import './guatemala.css';
+import mediaData from '../../assets/Media/Guatemala.json'
 
-import guat1 from '../../assets/Guatemala/airbnb_3b4.jpeg';
-import guat2 from '../../assets/Guatemala/antigua_arch_3b4.jpg';
-import guat3 from '../../assets/Guatemala/basketball_3b4.jpg';
-import guat4 from '../../assets/Guatemala/bird_art_3b4.jpg';
-import guat5 from '../../assets/Guatemala/bobby_lake_3b4.jpeg';
-import guat6 from '../../assets/Guatemala/breakfast_3b4.jpg';
-import guat7 from '../../assets/Guatemala/cool_pot_3b4.jpg';
-import guat8 from '../../assets/Guatemala/dog_foodstand_3b4.jpg';
-import guat9 from '../../assets/Guatemala/dog_on_hike_3b4.jpg';
-import guat10 from '../../assets/Guatemala/dog_volc_3b4.jpg';
-import guat11 from '../../assets/Guatemala/foodstand_3b4.jpg';
-import guat12 from '../../assets/Guatemala/foodstand2_3b4.jpg';
-import guat13 from '../../assets/Guatemala/guy_volc_3b4.jpeg';
-import guat14 from '../../assets/Guatemala/guys_lake_3b4.jpeg';
-import guat15 from '../../assets/Guatemala/jared_bobby_4b3.jpeg';
-import guat16 from '../../assets/Guatemala/lakeAtitlan_4b3jpg.jpg';
-import guat17 from '../../assets/Guatemala/local_food_sq.jpg';
-import guat18 from '../../assets/Guatemala/lookout_3b4.jpg';
-import guat19 from '../../assets/Guatemala/lookout_hills_3b4.jpg';
-import guat20 from '../../assets/Guatemala/me_errupt_4b3.jpeg';
-import guat21 from '../../assets/Guatemala/Me_hammock_3by4.jpeg';
-import guat22 from '../../assets/Guatemala/me_sunrise_3b4.jpeg';
-import guat23 from '../../assets/Guatemala/ridge_3b4.jpg';
-import guat24 from '../../assets/Guatemala/sandwhich_sq.jpg';
-import guat25 from '../../assets/Guatemala/stars_3b4.jpg';
-import guat26 from '../../assets/Guatemala/stars_volcano_3b4.jpg';
-import guat27 from '../../assets/Guatemala/steak_3b4.jpg';
-import guat28 from '../../assets/Guatemala/street_dress_3b4.jpg';
-import guat29 from '../../assets/Guatemala/street_shoppers_3b4.jpg';
-import guat30 from '../../assets/Guatemala/tacos_3b4.jpg';
-import guat31 from '../../assets/Guatemala/vol_first_arrive_3b4.jpg';
-import guat32 from '../../assets/Guatemala/volc_back_3b4.jpg';
-import guat33 from '../../assets/Guatemala/volc_exp_4b3.jpeg';
-import guat34 from '../../assets/Guatemala/volcano_sunrise_4b3.jpg';
-import guat35 from '../../assets/Guatemala/walkway_3b4.jpg';
-import guat36 from '../../assets/Guatemala/yellow_white_church_3b4.jpg';
-import guat37 from '../../assets/Guatemala/dog_walk_volcano_9b16.mp4'
-import guat38 from '../../assets/Guatemala/volcanoMorningPan.mp4'
-import guat39 from '../../assets/Guatemala/volcanoExplosion.mp4'
-import guat40 from '../../assets/Guatemala/lakePan.mp4'
-import guat41 from '../../assets/Guatemala/horse_dog_tree_3b4.jpg'
+const media = mediaData.map(item => item.url); 
 
-
-import paintBrush from '../../assets/Guatemala/brushstroke.png'
-
-const images = [
-  guat1,guat2,guat3,guat4,guat5,
-  guat6,
-  guat7,
-  guat8,
-  guat9, 
-  guat10,
-  guat11,
-  guat12,
-  guat13,
-  guat14,
-  guat15,
-  guat16,
-  guat17,
-  guat18,
-  guat19,
-  guat20,
-  guat21,
-  guat22,
-  guat23,
-  guat24,
-  guat25,
-  guat26,
-  guat27,
-  guat28,
-  guat29,
-  guat30,
-  guat31,
-  guat32,
-  guat33,
-  guat34,
-  guat35,
-  guat36,
-  guat37,
-  guat38,
-  guat39,
-  guat40,
-  guat41
-]
-
+console.log(mediaData)
+console.log('testtesttestetest')
+console.log(media)
 const Guatemala = () => {
     return (
       <div className='background'>
@@ -94,24 +15,29 @@ const Guatemala = () => {
           {/* Title */}
           <div className='titleblock'>
 
-            <img src={paintBrush} alt="Brush Stroke" className="brush-stroke"/>
-            <p className='title'>Guatemala</p>
+            <p className='title'> {"\u2013"} Guatemala {"\u2013"}</p>
           </div>
           
+          {/* text - start */}
+          <div className='pictureRow'>
+
+            <div className="picture-box" style={{ width: "60%" }}>
+            <p>
+              Along with my friends Bobby and Jared, I flew to Guatemala City in November 2024.
+              From there, we caught a ride to Antigua, where we spent the evening and the following day
+              exploring the city's stunning colonial architecture and vibrant atmosphere.           
+            </p>
+            </div>
+          </div>
+
           {/* pics - Antigua*/}
           <div className='pictureRow'>
 
-            <div class="picture-box" >
-              <p >
-              Along with my friends Bobby and Jared, I flew to Guatemala City in November 2024.
-              From there, we caught a ride to Antigua, where we spent the evening and the following day
-              exploring the city's stunning colonial architecture and vibrant atmosphere.
-              </p>
-            </div>
-            <img src={images[1]} alt="Guat 6" className="imagegups"/>                    
-            <img src={images[5]} alt="Guat 7" className="imagegups"/>
-            <img src={images[34]} alt="Guat 8" className="imagegups"/>
-            <img src={images[35]} alt="Guat 9" className="imagegups"/>
+            <img src={media[3]} alt="Guat" className="imagegups"/>     
+            <img src={media[4]} alt="Guat" className="imagegups"/>               
+            <img src={media[9]} alt="Guat" className="imagegups"/>
+            <img src={media[51]} alt="Guat" className="imagegups"/>
+            <img src={media[5]} alt="Guat" className="imagegups"/>
           
           </div>
 
@@ -140,36 +66,33 @@ const Guatemala = () => {
           {/* 3 pics - hike*/}
           <div className='pictureRow'>
 
-            <img src={images[8]} alt="Guat 6" className="imagegup"/>                    
-            <img src={images[31]} alt="Guat 7" className="imagegup"/>
-            <img src={images[30]} alt="Guat 8" className="imagegup"/>
-            <img src={images[19]} alt="Guat" className="imagegul"/> 
+            <img src={media[12]} alt="Guat 6" className="imagegup"/>                    
+            <img src={media[45]} alt="Guat 7" className="imagegup"/>
+            <img src={media[44]} alt="Guat 8" className="imagegup"/>
+            <img src={media[33]} alt="Guat" className="imagegul"/> 
             
           </div>
 
           {/* 4 pics/videos/text - volcano explosion*/}
           <div className='pictureRow'>
-          <img src={images[9]} alt="Guat" className="imagegup"/>
-            <div class="picture-box" style={{ width: "50%" }} >
+          <img src={media[13]} alt="Guat" className="imagegup"/>
+            <div className="picture-box" style={{ width: "50%" }} >
               <p>
               What followed was an absolutely mind-blowing natural wonder — checked off 
               the bucket list!
               </p>
             </div>
-            <video className='imagegups' controls muted>
-              <source src= {images[38]} type="video/mp4" />
+            <video className='imagegup2' controls muted>
+              <source src= {media[47]} type="video/mp4" />
               This video does not contain audio tracks.
             </video>
-            <video className='imagegups' controls muted>
-              <source src= {images[39]} type="video/mp4" />
-              This video does not contain audio tracks.
-            </video>
+            <img src={media[16]} alt="Guat" className="imagegul"/>
           </div>
 
           {/* 4.5 pics - volcano 2*/}
           <div className='pictureRow'>
-            <img src={images[32]} alt="Guat" className="imagegul"/>
-            <img src={images[32]} alt="Guat" className="imagegul"/>
+            <img src={media[17]} alt="Guat" className="imagegul"/>
+            <img src={media[15]} alt="Guat" className="imagegul"/>
           </div>          
 
           {/* 5 text - about until morning*/}
@@ -190,37 +113,34 @@ const Guatemala = () => {
 
           {/* 6 pics - sunrise 1*/}
           <div className='pictureRow'>
-            <img src={images[24]} alt="Guat" className="imagegup"/>
-            <img src={images[25]} alt="Guat" className="imagegup"/>
-            <img src={images[22]} alt="Guat" className="imagegup"/>
-            <img src={images[40]} alt="Guat" className="imagegup"/>
+            <img src={media[38]} alt="Guat" className="imagegup"/>
+            <img src={media[39]} alt="Guat" className="imagegup"/>
+            <img src={media[46]} alt="Guat" className="imagegul"/>
+
           </div>
 
           {/* 7 pics - sunrise 2*/}
           <div className='pictureRow'>
-            <img src={images[32]} alt="Guat" className="imagegul"/>
-            <img src={images[33]} alt="Guat" className="imagegul"/>
+            
+            <img src={media[50]} alt="Guat" className="imagegul"/>
+            <img src={media[35]} alt="Guat" className="imagegup"/>
+            <img src={media[21]} alt="Guat" className="imagegup"/>
           </div>
 
           {/* 8 video sunrise 3*/}
           <div className='pictureRow'>
-            <img src={images[12]} alt="Guat" className="imagegup"/>
-            <video className='imagegups' controls muted>
-              <source src= {images[37]} type="video/mp4" />
+            <img src={media[34]} alt="Guat" className="imagegup"/>
+            <video className='imagegup2' controls muted>
+              <source src= {media[47]} type="video/mp4" />
               This video does not contain audio tracks.
             </video>
-            <video className='imagegups' controls muted>
-              <source src= {images[36]} type="video/mp4" />
+            <video className='imagegup2' controls muted>
+              <source src= {media[14]} type="video/mp4" />
               This video does not contain audio tracks.
             </video>
+            <img src={media[24]} alt="Guat" className="imagegul"/>
           </div>
 
-          {/* 9 pics - sunrise 4*/}
-          <div className='pictureRow'>
-            
-            <img src={images[21]} alt="Guat" className="imagegup"/>
-            <img src={images[14]} alt="Guat" className="imagegul"/>
-          </div>
 
           {/* 10 text - about going to pana*/}
           <div className='pictureRow'>
@@ -239,24 +159,24 @@ const Guatemala = () => {
           {/* 11 pics - Atitlan/ Pana */}
           <div className='pictureRow'>
             
-            <img src={images[15]} alt="Guat" className="imagegul"/>
-            <img src={images[13]} alt="Guat" className="imagegup"/>
+            <img src={media[27]} alt="Guat" className="imagegul"/>
+            <img src={media[22]} alt="Guat" className="imagegup"/>
             <div className='stacked'>
-              <img src={images[23]} alt="Guat" className="imagegu_sq"/>
-              <img src={images[16]} alt="Guat" className="imagegu_sq"/>
+              <img src={media[37]} alt="Guat" className="imagegu_sq"/>
+              <img src={media[30]} alt="Guat" className="imagegu_sq"/>
             </div>
           </div>
 
           {/* 12 pics/video - Atitlan/ Pana */}
           <div className='pictureRow'>
             
-            <img src={images[4]} alt="Guat" className="imagegup"/>
-            <img src={images[0]} alt="Guat" className="imagegup"/>
-            <video className='imagegups' controls muted>
-              <source src= {images[39]} type="video/mp4" />
+            <img src={media[8]} alt="Guat" className="imagegup"/>
+            <img src={media[1]} alt="Guat" className="imagegup"/>
+            <video className='imagegup2' controls muted>
+              <source src= {media[28]} type="video/mp4" />
               This video does not contain audio tracks.
             </video>
-            <img src={images[20]} alt="Guat" className="imagegup"/>
+            <img src={media[0]} alt="Guat" className="imagegup"/>
           </div>
 
           {/* 13 text - about going to san pedro*/}
@@ -274,10 +194,10 @@ const Guatemala = () => {
           {/* 14 pics - San Pedro food pics */}
           <div className='pictureRow'>
             
-            <img src={images[11]} alt="Guat" className="imagegup"/>
-            <img src={images[29]} alt="Guat" className="imagegup"/>
-            <img src={images[10]} alt="Guat" className="imagegup"/>
-            <img src={images[7]} alt="Guat" className="imagegup"/>
+            <img src={media[18]} alt="Guat" className="imagegup"/>
+            <img src={media[43]} alt="Guat" className="imagegup"/>
+            <img src={media[19]} alt="Guat" className="imagegup"/>
+            <img src={media[11]} alt="Guat" className="imagegup"/>
           </div>
 
           {/* 15 text - about going to san juan*/}
@@ -295,10 +215,10 @@ const Guatemala = () => {
 
           {/* 16 pics - San Juan */}
           <div className='pictureRow'>
-            <img src={images[27]} alt="Guat" className="imagegup"/>
-            <img src={images[6]} alt="Guat" className="imagegup"/>
-            <img src={images[2]} alt="Guat" className="imagegul"/>
-            <img src={images[28]} alt="Guat" className="imagegup"/>
+            <img src={media[41]} alt="Guat" className="imagegup"/>
+            <img src={media[10]} alt="Guat" className="imagegup"/>
+            <img src={media[6]} alt="Guat" className="imagegul"/>
+            <img src={media[42]} alt="Guat" className="imagegup"/>
           </div>
 
           {/* 17 text - about going to san marcos*/}
@@ -310,8 +230,8 @@ const Guatemala = () => {
                own distinct character, and San Marcos was no exception—known for its laid-back, 
                yoga-focused vibe. I hiked up the nearby nature reserve and, to my surprise, 
                had the peak all to myself. It wasn't hard to see why—most people were gathered 
-               down by the water, drawn to a 40-foot platform perfect for cliff jumping. 
-               I couldn't resist. I jumped in, and then spent the rest of the afternoon 
+               down by the water, drawn to a 40-foot cliff diving platform. 
+               I jumped in, and then spent the rest of the afternoon 
                swimming and enjoying the sunshine.
               </p>
             </div>            
@@ -319,10 +239,10 @@ const Guatemala = () => {
 
           {/* 18 pics - San marcos */}
           <div className='pictureRow'>
-            <img src={images[3]} alt="Guat" className="imagegup"/>
-            <img src={images[3]} alt="Guat" className="imagegup"/>
-            <img src={images[17]} alt="Guat" className="imagegup"/>
-            <img src={images[18]} alt="Guat" className="imagegup"/>
+
+            <img src={media[25]} alt="Guat" className="imagegup"/>
+            <img src={media[36]} alt="Guat" className="imagegul"/>
+            <img src={media[32]} alt="Guat" className="imagegup"/>
           </div>
 
           {/* 19 text - final day*/}
@@ -340,10 +260,17 @@ const Guatemala = () => {
 
           {/* 20 pics - final and extras */}
           <div className='pictureRow'>
-            <img src={images[3]} alt="Guat" className="imagegup"/>
-            <img src={images[3]} alt="Guat" className="imagegup"/>
-            <img src={images[17]} alt="Guat" className="imagegup"/>
-            <img src={images[18]} alt="Guat" className="imagegup"/>
+          <img src={media[20]} alt="Guat" className="imagegup"/>
+            <img src={media[31]} alt="Guat" className="imagegup"/>
+            <img src={media[23]} alt="Guat" className="imagegup"/>
+            <img src={media[40]} alt="Guat" className="imagegup"/>
+          </div>
+
+          {/* 21 pics - extras */}
+          <div className='pictureRow'>
+            <img src={media[52]} alt="Guat" className="imagegup"/>           
+            <img src={media[7]} alt="Guat" className="imagegup"/>
+            <img src={media[29]} alt="Guat" className="imagegul"/>
           </div>
 
 
