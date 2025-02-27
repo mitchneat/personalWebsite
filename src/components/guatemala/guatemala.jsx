@@ -131,7 +131,7 @@ const Guatemala = () => {
           <div className='pictureRow'>
             <img src={media[34]} alt="Guat" className="imagegup"/>
             <video className='imagegup2' controls muted>
-              <source src= {media[47]} type="video/mp4" />
+              <source src= {media[48]} type="video/mp4" />
               This video does not contain audio tracks.
             </video>
             <video className='imagegup2' controls muted>
