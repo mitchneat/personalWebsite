@@ -15,13 +15,7 @@
     position: relative;
     display: inline-block;
 }
-.brush-stroke {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-40%, -40%) rotate(2deg);
-    width: clamp(20vw, 60vw, 70vw); 
-}
+
 .title{
     font-size: clamp(3rem, 6vw, 7rem); 
     font-family: "Amatic SC", serif;
@@ -82,4 +76,39 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Show mobile menu button for smaller screens */
+@media screen and (max-width: 768px) {
+    .picture-box p{
+        font-family: "Poppins", serif;
+        font-size: clamp(0.5rem, 0.5vw, 2rem); 
+    }
+
+    .picture-box { 
+      padding: 0.5vw;  
+  }
+
+  .blogPage {
+    gap: 5px;  
+    
+}
+.pictureRow {
+    gap: 5px;
+}
 }
