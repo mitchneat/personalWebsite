@@ -37,7 +37,7 @@ const Guatemala = () => {
             <img src={media[4]} alt="Guat" className="imagegups"/>               
             <img src={media[9]} alt="Guat" className="imagegups"/>
             <img src={media[51]} alt="Guat" className="imagegups"/>
-            <img src={media[5]} alt="Guat" className="imagegups"/>
+            <img src={media[52]} alt="Guat" className="imagegups"/>
           
           </div>
 
@@ -87,7 +87,7 @@ const Guatemala = () => {
               This video does not contain audio tracks.
             </video>
             <img src={media[16]} alt="Guat" className="imagegul"/>
-          </div>
+          </div> 
 
           {/* 4.5 pics - volcano 2*/}
           <div className='pictureRow'>
@@ -268,7 +268,7 @@ const Guatemala = () => {
 
           {/* 21 pics - extras */}
           <div className='pictureRow'>
-            <img src={media[52]} alt="Guat" className="imagegup"/>           
+            <img src={media[5]} alt="Guat" className="imagegup"/>           
             <img src={media[7]} alt="Guat" className="imagegup"/>
             <img src={media[29]} alt="Guat" className="imagegul"/>
           </div>
