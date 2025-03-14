@@ -15,6 +15,20 @@ const Projects = () => {
         <div className='image-page'>
             {/*!!!!!!!!!!!!!!!!!all pictures have to be 16:9 asspect ratio!!!!!!!!!!!! */}
 
+            <Link to='/projects/electric-forecast' className="image-link">
+                <div class="rectangle image-container">
+                    <img src={AT} alt='picat' className='logoimage1'/>
+                    <p class='projoverlayText'>Electric Usage Forecast</p>
+                </div>  
+            </Link>
+
+            <Link to='/projects/hike' className="image-link">
+                <div class="rectangle image-container">
+                    <img src={AT} alt='picat' className='logoimage1'/>
+                    <p class='projoverlayText'>AT Tableau Dashboard</p>
+                </div>  
+            </Link>
+
             <Link to='/projects/photoEveryday' className="image-link">
                 <div class="rectangle image-container">
                         <img src={pic1} alt="pic1" className="logoimage"/>
@@ -28,13 +42,6 @@ const Projects = () => {
                 <div class="rectangle image-container">
                     <img src={pic4} alt="pic1" className="logoimage1"/>
                     <p class='projoverlayText'>Roboflow CV Bird Identifier</p>
-                </div>  
-            </Link>
-
-            <Link to='/projects/hike' className="image-link">
-                <div class="rectangle image-container">
-                    <img src={AT} alt='picat' className='logoimage1'/>
-                    <p class='projoverlayText'>AT Tableau Dashboard</p>
                 </div>  
             </Link>
 
