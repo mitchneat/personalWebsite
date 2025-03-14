@@ -1,0 +1,38 @@
+[
+  {
+    "url": "https://mitch-neat-website-data.s3.amazonaws.com/ElectricalForecast/Autocorrelations_residuals.png"
+  },
+  {
+    "url": "https://mitch-neat-website-data.s3.amazonaws.com/ElectricalForecast/Bokeh_Plot1.html"
+  },
+  {
+    "url": "https://mitch-neat-website-data.s3.amazonaws.com/ElectricalForecast/avg_usage_by_day.png"
+  },
+  {
+    "url": "https://mitch-neat-website-data.s3.amazonaws.com/ElectricalForecast/avg_usage_by_hour.png"
+  },
+  {
+    "url": "https://mitch-neat-website-data.s3.amazonaws.com/ElectricalForecast/avg_usage_by_month.png"
+  },
+  {
+    "url": "https://mitch-neat-website-data.s3.amazonaws.com/ElectricalForecast/distribution.png"
+  },
+  {
+    "url": "https://mitch-neat-website-data.s3.amazonaws.com/ElectricalForecast/heatmap.png"
+  },
+  {
+    "url": "https://mitch-neat-website-data.s3.amazonaws.com/ElectricalForecast/qq_plot.png"
+  },
+  {
+    "url": "https://mitch-neat-website-data.s3.amazonaws.com/ElectricalForecast/res_hist.png"
+  },
+  {
+    "url": "https://mitch-neat-website-data.s3.amazonaws.com/ElectricalForecast/rolling_daily_forecast.png"
+  },
+  {
+    "url": "https://mitch-neat-website-data.s3.amazonaws.com/ElectricalForecast/time_series_decomposition.png"
+  },
+  {
+    "url": "https://mitch-neat-website-data.s3.amazonaws.com/ElectricalForecast/zz_arima_summary.jpg"
+  }
+]

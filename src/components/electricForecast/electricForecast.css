@@ -1,0 +1,32 @@
+.bg-wrapper{
+    background-color: rgb(113, 184, 131);
+    padding-top: calc(5rem + 2%); 
+    padding-bottom: 5rem;
+}
+.blogPage-ef {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+    gap: 10px;  
+    
+}
+.titleblock-ef {
+    position: relative;
+    display: inline-block;
+}
+.title-ef{
+    font-size: clamp(3rem, 6vw, 7rem); 
+    /* font-family: "Amatic SC", serif; */
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.header-ef{
+    font-size: clamp(2rem, 4vw, 5rem); 
+    /* font-family: "Amatic SC", serif; */
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}

@@ -16,62 +16,62 @@ const Projects = () => {
             {/*!!!!!!!!!!!!!!!!!all pictures have to be 16:9 asspect ratio!!!!!!!!!!!! */}
 
             <Link to='/projects/electric-forecast' className="image-link">
-                <div class="rectangle image-container">
+                <div className="rectangle image-container">
                     <img src={AT} alt='picat' className='logoimage1'/>
-                    <p class='projoverlayText'>Electric Usage Forecast</p>
+                    <p className='projoverlayText'>Electric Usage Forecast</p>
                 </div>  
             </Link>
 
             <Link to='/projects/hike' className="image-link">
-                <div class="rectangle image-container">
+                <div className="rectangle image-container">
                     <img src={AT} alt='picat' className='logoimage1'/>
-                    <p class='projoverlayText'>AT Tableau Dashboard</p>
+                    <p className='projoverlayText'>AT Tableau Dashboard</p>
                 </div>  
             </Link>
 
             <Link to='/projects/photoEveryday' className="image-link">
-                <div class="rectangle image-container">
+                <div className="rectangle image-container">
                         <img src={pic1} alt="pic1" className="logoimage"/>
                         <img src={pic3} alt="pic1" className="logoimage"/>
                         <img src={pic2} alt="pic2" className="logoimage"/>
-                    <p class='projoverlayText'>Photo Everyday</p>
+                    <p className='projoverlayText'>Photo Everyday</p>
                 </div>  
             </Link>
 
             <Link to='/projects/robocv' className="image-link">
-                <div class="rectangle image-container">
+                <div className="rectangle image-container">
                     <img src={pic4} alt="pic1" className="logoimage1"/>
-                    <p class='projoverlayText'>Roboflow CV Bird Identifier</p>
+                    <p className='projoverlayText'>Roboflow CV Bird Identifier</p>
                 </div>  
             </Link>
 
             <Link to='/projects/parallel' className="image-link">
-            <div class="rectangle image-container">
+            <div className="rectangle image-container">
                     <img src={parallel} alt='picat' className='logoimage1'/>
                     <p className='projoverlayText'>Parallel Coding</p>
                 </div>  
             </Link>
 
             <Link to='/comingSoon' className="image-link">
-            <div class="rectangle text-container">
+            <div className="rectangle text-container">
                     <p className='projectLabel'>Travel Tracker Dashboard</p>
                 </div>  
             </Link>
 
             <Link to='/comingSoon' className="image-link">
-            <div class="rectangle text-container">
+            <div className="rectangle text-container">
                     <p className='projectLabel'>Reciept Scanner and Price Analysis</p>
                 </div>  
             </Link>
 
             <Link to='/comingSoon' className="image-link">
-            <div class="rectangle text-container">
+            <div className="rectangle text-container">
                     <p className='projectLabel'>Capstone CV for black hornet drone</p>
                 </div>  
             </Link>
 
             <Link to='/comingSoon' className="image-link">
-            <div class="rectangle text-container">
+            <div className="rectangle text-container">
                     <p className='projectLabel'>NHL Analytics</p>
                 </div>  
             </Link>
