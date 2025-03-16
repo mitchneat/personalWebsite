@@ -4,9 +4,6 @@ import mediaData from '../../assets/Media/Guatemala.json'
 
 const media = mediaData.map(item => item.url); 
 
-console.log(mediaData)
-console.log('testtesttestetest')
-console.log(media)
 const Guatemala = () => {
     return (
       <div className='background'>
@@ -75,7 +72,8 @@ const Guatemala = () => {
 
           {/* 4 pics/videos/text - volcano explosion*/}
           <div className='pictureRow'>
-          <img src={media[13]} alt="Guat" className="imagegup"/>
+
+            <img src={media[13]} alt="Guat" className="imagegup"/>
             <div className="picture-box" style={{ width: "50%" }} >
               <p>
               What followed was an absolutely mind-blowing natural wonder — checked off 

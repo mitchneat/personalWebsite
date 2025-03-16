@@ -20,7 +20,7 @@ import HikeData from "./components/hikeData/hikeData";
 import Kmeans from "./components/kmeans/kmeans";
 import Indo from "./components/indo/indo"; 
 import Guatemala from "./components/guatemala/guatemala"; 
-
+import Electric from "./components/electricForecast/electricForecast"
 function App() {
 
   return (
@@ -44,6 +44,7 @@ function App() {
             <Route path="/projects/parallel" element={<Kmeans />} />
             <Route path="/travel/Indonesia" element={<Indo />} />
             <Route path="/travel/Guatemala" element={<Guatemala />} />
+            <Route path="/projects/electric-forecast" element={<Electric />} />
           </Routes>
         </div>
         <Footer className='footer'/>

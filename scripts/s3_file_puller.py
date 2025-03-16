@@ -3,7 +3,7 @@ import json
 
 # Define the base bucket and folder
 base_bucket_name = "mitch-neat-website-data"
-folder_name = "Guatemala/"  # Include the trailing slash # WHAT TO CHANEG ----------------------
+folder_name = "ElectricalForecast/"  # Include the trailing slash # WHAT TO CHANEG ----------------------
 
 # Configure AWS S3 client
 s3 = boto3.client("s3")
