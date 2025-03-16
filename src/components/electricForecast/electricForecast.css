@@ -33,6 +33,7 @@
 
 .picture-box-ef {
   text-align: center;  
+  width: 70%;
 }
 
 .picture-box-ef p{
@@ -67,4 +68,7 @@
     .bokehPlot{
         padding: 0rem;
      }
+     .picture-box-ef {
+        width: 90%;  
+      }
   }

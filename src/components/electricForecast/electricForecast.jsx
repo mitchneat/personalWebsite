@@ -1,34 +1,36 @@
 import React from 'react';
-import { useEffect } from "react";
+import { useEffect, useRef  } from "react";
 import './electricForecast.css';
 import mediaData from '../../assets/Media/ElectricalForecast.json'
 import { embed } from '@bokeh/bokehjs';
 
 
 const media = mediaData.map(item => item.url); 
+const plotURL = media[1];
 
 const ElectricForecast = () => {
 
-
+    const isEmbeddedRef = useRef(false);
     useEffect(() => {
-
-        fetch(media[1])
-        .then(res => res.json())
-        .then(json => {
+        const fetchAndEmbed = async () => {
+            const res = await fetch(plotURL);
+            const json = await res.json();
             const target = document.getElementById('bokeh-target');
-            if (target) {
-            target.innerHTML = ''; // Ensure it clears right before embedding
-            embed.embed_item(json, 'bokeh-target');
+            if (target && !isEmbeddedRef.current) {
+                target.innerHTML = '';
+                embed.embed_item(json, 'bokeh-target');
+                isEmbeddedRef.current = true;
             }
-        });
+        };
+
+        fetchAndEmbed();
 
         return () => {
             const target = document.getElementById('bokeh-target');
             if (target) target.innerHTML = '';
+            isEmbeddedRef.current = false;
         };
-
-
-      }, []);
+    }, []);
 
     return (
         <div className='bg-wrapper'>
@@ -47,7 +49,7 @@ const ElectricForecast = () => {
                 {/* text - inspiration */}
                 <div className='pictureRow'>
 
-                    <div className="picture-box-ef" style={{ width: "60%" }}>
+                    <div className="picture-box-ef">
                         <p>
                         While paying my utility bills, I noticed fluctuations in my monthly costs.
                         This led me to explore whether I could forecast these changes and develop 
@@ -64,7 +66,7 @@ const ElectricForecast = () => {
                 {/* text - Process */}
                 <div className='pictureRow'>
 
-                    <div className="picture-box-ef" style={{ width: "60%" }}>
+                    <div className="picture-box-ef">
                         <p>
                         To analyze my electricity usage, I retrieved a year's worth of 30-minute interval
                         data from my provider. I cleaned and reformatted it for time series visualization,
@@ -95,7 +97,7 @@ const ElectricForecast = () => {
                 {/* text - Process continued*/}
                 <div className='pictureRow'>
 
-                    <div className="picture-box-ef" style={{ width: "60%" }}>
+                    <div className="picture-box-ef">
                         <p>
                         I initially plotted daily electricity usage over the year with a 7-day trailing
                         average, but it felt too compressed. To provide a clearer, more focused view,
@@ -116,7 +118,7 @@ const ElectricForecast = () => {
                 {/* text - Process cont */}
                 <div className='pictureRow'>
 
-                    <div className="picture-box-ef" style={{ width: "50%" }}>
+                    <div className="picture-box-ef">
                         <p>
                         The earlier visualizations suggested the presence of seasonal patterns,
                         so I conducted formal tests to check for stationarity. In addition,
@@ -136,7 +138,7 @@ const ElectricForecast = () => {
                 {/* text - Process continued 2*/}
                 <div className='pictureRow'>
 
-                    <div className="picture-box-ef" style={{ width: "60%" }}>
+                    <div className="picture-box-ef">
                         <p>
                         To compare forecasting performance, I trained an ARIMA model on both 30-minute interval and daily data.
                         By analyzing summary statistics, Ljung-Box test results, and residual diagnostics
@@ -162,7 +164,7 @@ const ElectricForecast = () => {
                 {/* text - Process forecast*/}
                 <div className='pictureRow'>
 
-                    <div className="picture-box-ef" style={{ width: "60%" }}>
+                    <div className="picture-box-ef">
                         <p>
                         To evaluate the model, I forecasted kWh usage for the final month of data and compared it to actual values,
                         calculating MSE along the way. A sudden cold week in February caused a spike in electricity usage,
@@ -185,7 +187,7 @@ const ElectricForecast = () => {
                 {/* text - Results */}
                 <div className='pictureRow'>
 
-                    <div className="picture-box" style={{ width: "50%" }}>
+                    <div className="picture-box-ef">
                         <p>
                             Model 1:  <br></br><br></br>
                             Mean Absolute Error (MAE): 7.0699<br></br>
@@ -214,7 +216,7 @@ const ElectricForecast = () => {
                 {/* text - Conclusion */}
                 <div className='pictureRow'>
 
-                    <div className="picture-box-ef" style={{ width: "60%" }}>
+                    <div className="picture-box-ef">
                         <p>
                         While the analysis of the first model suggested it was a decent fit, 
                         it struggled to capture sudden spikes, leading to consistent underprojections. 
@@ -246,7 +248,7 @@ const ElectricForecast = () => {
                 {/* text - NextSteps */}
                 <div className='pictureRow'>
 
-                    <div className="text-box" style={{ width: "60%" }}>
+                    <div className="text-box" style={{ width: "80%" }}>
                         <ul>
                             <li>Develop an LSTM ML model with additional input data, including number of occupants & weather</li>
                             <li>Gather local pricing information, including surge pricing, to convert kWh to dollar amounts</li>
@@ -259,7 +261,7 @@ const ElectricForecast = () => {
                 {/*
                 <div className='pictureRow'>
 
-                    <div className="picture-box-ef" style={{ width: "60%" }}>
+                    <div className="picture-box-ef">
                         <p>
                             All code, print outs, and additional plots can be found on my github mneat
                         </p>
