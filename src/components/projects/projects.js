@@ -17,7 +17,7 @@ const Projects = () => {
 
             <Link to='/projects/electric-forecast' className="image-link">
                 <div className="rectangle image-container">
-                    <img src={AT} alt='picat' className='logoimage1'/>
+                    <img src="https://mitch-neat-website-data.s3.amazonaws.com/ElectricalForecast/daily_usage_with_7day_trail2.png" alt='picat' className='logoimage1'/>
                     <p className='projoverlayText'>Electric Usage Forecast</p>
                 </div>  
             </Link>

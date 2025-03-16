@@ -1,22 +1,34 @@
 import React from 'react';
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import './electricForecast.css';
 import mediaData from '../../assets/Media/ElectricalForecast.json'
+import { embed } from '@bokeh/bokehjs';
+
 
 const media = mediaData.map(item => item.url); 
 
 const ElectricForecast = () => {
 
 
-    const [bokehHTML, setBokehHTML] = useState("");
-
     useEffect(() => {
-        fetch(media[1])
-        .then(response => response.text())
-        .then(html => setBokehHTML(html))
-        .catch(error => console.error("Error fetching Bokeh plot:", error));
-    }, []);
 
+        fetch(media[1])
+        .then(res => res.json())
+        .then(json => {
+            const target = document.getElementById('bokeh-target');
+            if (target) {
+            target.innerHTML = ''; // Ensure it clears right before embedding
+            embed.embed_item(json, 'bokeh-target');
+            }
+        });
+
+        return () => {
+            const target = document.getElementById('bokeh-target');
+            if (target) target.innerHTML = '';
+        };
+
+
+      }, []);
 
     return (
         <div className='bg-wrapper'>
@@ -24,7 +36,7 @@ const ElectricForecast = () => {
                 {/* Title */}
                 <div className='titleblock-ef'>
 
-                    <p className='title-ef'> {"\u2013"} Predicting Energy Usage {"\u2013"}</p>
+                    <p className='title-ef'> Predicting Energy Usage </p>
                 </div>  
 
                 {/* header - inspiration */}
@@ -35,7 +47,7 @@ const ElectricForecast = () => {
                 {/* text - inspiration */}
                 <div className='pictureRow'>
 
-                    <div className="picture-box" style={{ width: "60%" }}>
+                    <div className="picture-box-ef" style={{ width: "60%" }}>
                         <p>
                         While paying my utility bills, I noticed fluctuations in my monthly costs.
                         This led me to explore whether I could forecast these changes and develop 
@@ -52,7 +64,7 @@ const ElectricForecast = () => {
                 {/* text - Process */}
                 <div className='pictureRow'>
 
-                    <div className="picture-box" style={{ width: "60%" }}>
+                    <div className="picture-box-ef" style={{ width: "60%" }}>
                         <p>
                         To analyze my electricity usage, I retrieved a year's worth of 30-minute interval
                         data from my provider. I cleaned and reformatted it for time series visualization,
@@ -71,19 +83,19 @@ const ElectricForecast = () => {
                 {/* plots - per day & per month */}
                 <div className='pictureRow'>
 
-                    <img src={media[3]} alt="ElectricalForecast" className="imagegul"/>     
+                    <img src={media[2]} alt="ElectricalForecast" className="imagegul"/>     
                     <img src={media[4]} alt="ElectricalForecast" className="imagegul"/>               
                 </div>
                 {/* plots - heatmap */}
                 <div className='pictureRow'>
 
-                    <img src={media[6]} alt="ElectricalForecast" className="imagegupl"/>                  
+                    <img src={media[6]} alt="ElectricalForecast" className="imageheat"/>                  
                 </div>
 
                 {/* text - Process continued*/}
                 <div className='pictureRow'>
 
-                    <div className="picture-box" style={{ width: "60%" }}>
+                    <div className="picture-box-ef" style={{ width: "60%" }}>
                         <p>
                         I initially plotted daily electricity usage over the year with a 7-day trailing
                         average, but it felt too compressed. To provide a clearer, more focused view,
@@ -92,22 +104,19 @@ const ElectricForecast = () => {
                     </div>
                 </div>
 
-                {/* plots - scrolling time series */}
-                <div className='bokeh'>
-                    <iframe 
-                        src= {media[1]}
-                        width="100%" 
-                        height="600px"
-                        style={{ border: "none" }}
-                    />
+
+                {/* plot - Bokeh plot*/}
+                <div className='bokehPlot'>
+                    <div id="bokeh-target"></div>
                 </div>
 
-                <div dangerouslySetInnerHTML={{ __html: bokehHTML }} />
+               
 
-                {/* text/plot - Process split with ts decop */}
+
+                {/* text - Process cont */}
                 <div className='pictureRow'>
 
-                    <div className="picture-box" style={{ width: "50%" }}>
+                    <div className="picture-box-ef" style={{ width: "50%" }}>
                         <p>
                         The earlier visualizations suggested the presence of seasonal patterns,
                         so I conducted formal tests to check for stationarity. In addition,
@@ -116,13 +125,18 @@ const ElectricForecast = () => {
                         Here is the time series decomposition. 
                         </p>
                     </div>
-                    <img src={media[10]} alt="Guat" className="imagegup"/>
                 </div>
+                {/* plot - ts decop */}
+                <div className='pictureRow'>
+
+                    <img src={media[10]} alt="Guat" className="imageheat"/>
+                </div>
+
 
                 {/* text - Process continued 2*/}
                 <div className='pictureRow'>
 
-                    <div className="picture-box" style={{ width: "60%" }}>
+                    <div className="picture-box-ef" style={{ width: "60%" }}>
                         <p>
                         To compare forecasting performance, I trained an ARIMA model on both 30-minute interval and daily data.
                         By analyzing summary statistics, Ljung-Box test results, and residual diagnostics
@@ -148,7 +162,7 @@ const ElectricForecast = () => {
                 {/* text - Process forecast*/}
                 <div className='pictureRow'>
 
-                    <div className="picture-box" style={{ width: "60%" }}>
+                    <div className="picture-box-ef" style={{ width: "60%" }}>
                         <p>
                         To evaluate the model, I forecasted kWh usage for the final month of data and compared it to actual values,
                         calculating MSE along the way. A sudden cold week in February caused a spike in electricity usage,
@@ -166,21 +180,26 @@ const ElectricForecast = () => {
                 {/* plots - pred vs actual */}
                 <div className='pictureRow'>
 
-                    <img src={media[9]} alt="ElectricalForecast" className="imagegul"/>     
+                    <img src={media[9]} alt="ElectricalForecast" className="imageheat"/>     
                 </div>
                 {/* text - Results */}
                 <div className='pictureRow'>
 
                     <div className="picture-box" style={{ width: "50%" }}>
                         <p>
-                            Model 1: 
-                            MSE: 234223    
-                        </p>
-                    </div>
-                    <div className="picture-box" style={{ width: "50%" }}>
-                        <p>
-                            Model 2: 
-                            MSE: 234223    
+                            Model 1:  <br></br><br></br>
+                            Mean Absolute Error (MAE): 7.0699<br></br>
+                            Root Mean Squared Error (RMSE): 12.3489 <br></br>
+                            Mean Absolute Percentage Error (MAPE): 24.2606<br></br>
+                            Total Forecasted Usage for the month: 511.45 kWh<br></br>
+                            Total Actual Usage for the month: 666.08 kWh <br></br><br></br>
+
+                            Model 2:  <br></br><br></br>
+                            Mean Absolute Error (MAE): 5.6073<br></br>
+                            Root Mean Squared Error (RMSE): 8.1920 <br></br>
+                            Mean Absolute Percentage Error (MAPE): 24.9710<br></br>
+                            Total Forecasted Usage for the month: 656.77 kWh<br></br>
+                            Total Actual Usage for the month: 666.08 kWh <br></br>
                         </p>
                     </div>
                 </div>
@@ -195,15 +214,25 @@ const ElectricForecast = () => {
                 {/* text - Conclusion */}
                 <div className='pictureRow'>
 
-                    <div className="picture-box" style={{ width: "60%" }}>
+                    <div className="picture-box-ef" style={{ width: "60%" }}>
                         <p>
-                        While the first model performed decently, it struggled to capture sudden spikes.
-                        The second model is an improvement, but it's not practical for use in a budgeting
-                        tool. Although I considered using a SARIMA model to account for seasonality,
-                        I only have one cycle of data, whereas SARIMA typically requires two or three.
-                        Overall, I'm pleased with the results but recognize there's plenty of room for
-                        improvement. I plan to retest the first model throughout the spring to evaluate
-                        its performance over the coming months.
+                        While the analysis of the first model suggested it was a decent fit, 
+                        it struggled to capture sudden spikes, leading to consistent underprojections. 
+                        As a result, the model was off by approximately 150 kWh for the month, or about 
+                        23%—a significant error. The second model showed a slight reduction in MAE and 
+                        followed the trend more accurately, alternating between over and under projections.
+                        This resulted in a much closer total forecast, 
+                        with an error of only around 10 kWh, or 1%. <br></br> <br></br>
+
+                        Although the second model is an improvement, it isn't practical for use in a 
+                        budgeting tool. I considered using a SARIMA model to account for seasonality,
+                        but with only one cycle of data, it's not feasible, as SARIMA typically requires
+                        two or three.<br></br><br></br>
+                        
+                        Overall, I'm satisfied with the results given the unexpected data spike, 
+                        but I recognize there is still room for improvement. I plan to retest the 
+                        first model throughout the spring to assess its performance in the coming months.
+
      
                         </p>
                     </div>
@@ -219,12 +248,7 @@ const ElectricForecast = () => {
 
                     <div className="text-box" style={{ width: "60%" }}>
                         <ul>
-                            <li>Develop an LSTM ML model with additional input data, including:
-                                <ul>
-                                <li>Number of occupants</li>
-                                <li>Weather data</li>
-                                </ul>
-                            </li>
+                            <li>Develop an LSTM ML model with additional input data, including number of occupants & weather</li>
                             <li>Gather local pricing information, including surge pricing, to convert kWh to dollar amounts</li>
                             <li>Apply the model to gas and water bills for a complete utility forecast</li>
                         </ul>
@@ -235,7 +259,7 @@ const ElectricForecast = () => {
                 {/*
                 <div className='pictureRow'>
 
-                    <div className="picture-box" style={{ width: "60%" }}>
+                    <div className="picture-box-ef" style={{ width: "60%" }}>
                         <p>
                             All code, print outs, and additional plots can be found on my github mneat
                         </p>
