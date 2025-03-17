@@ -1,26 +1,28 @@
 import './App.css';
-// import React, { useState, useEffect } from 'react';
-
-
-import Navbar from "./components/navbar/navbar";
-import Landing from "./components/landing/landing";
-import About from "./components/about/about";
-import Photos from "./components/photos/photos";
-// import Resume from "./components/resume/resume";
-import Greece from "./components/greece/greece";
-import Contact from "./components/contact/contact";
-import Footer from "./components/footer/footer";
+import { Suspense, lazy } from 'react';
 import { Routes, Route } from "react-router-dom";
-import PhotoEveryday from "./components/photoEveryday/photoEveryday";
-import Projects from "./components/projects/projects";
-import ComingSoon from "./components/comingSoon/comingSoon";
-import Robocv from "./components/robocv/robocv";
+// import React, { useState, useEffect } from 'react';
+import Navbar from "./components/navbar/navbar";
 import Loader from "./components/loader/loader";
-import HikeData from "./components/hikeData/hikeData";
-import Kmeans from "./components/kmeans/kmeans";
-import Indo from "./components/indo/indo"; 
-import Guatemala from "./components/guatemala/guatemala"; 
-import Electric from "./components/electricForecast/electricForecast"
+import Footer from "./components/footer/footer";
+import Landing from "./components/landing/landing";
+
+const About = lazy(() => import("./components/about/about"));
+const Photos = lazy(() => import("./components/photos/photos"));
+// const Resume = lazy(() => import("./components/resume/resume"));
+const Greece = lazy(() => import("./components/greece/greece"));
+const Contact = lazy(() => import("./components/contact/contact"));
+const PhotoEveryday = lazy(() => import("./components/photoEveryday/photoEveryday"));
+const Projects = lazy(() => import("./components/projects/projects"));
+const ComingSoon = lazy(() => import("./components/comingSoon/comingSoon"));
+const Robocv = lazy(() => import("./components/robocv/robocv"));
+const HikeData = lazy(() => import("./components/hikeData/hikeData"));
+const Kmeans = lazy(() => import("./components/kmeans/kmeans"));
+const Indo = lazy(() => import("./components/indo/indo"));
+const Guatemala = lazy(() => import("./components/guatemala/guatemala"));
+const Electric = lazy(() => import("./components/electricForecast/electricForecast"));
+
+
 function App() {
 
   return (
@@ -30,21 +32,23 @@ function App() {
         <Navbar />
         <div className="container">
           <Routes>
+            {/* Landing is always rendered and never lazy-loaded */}
             <Route path="/" element={<Landing />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/photos" element={<Photos />} />
-            {/* <Route path="/resume" element={<Resume />} /> */}
-            <Route path="/greece" element={<Greece />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/projects/photoEveryday" element={<PhotoEveryday />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/comingSoon" element={<ComingSoon />} />
-            <Route path="/projects/robocv" element={<Robocv />} />
-            <Route path="/projects/hike" element={<HikeData />} />
-            <Route path="/projects/parallel" element={<Kmeans />} />
-            <Route path="/travel/Indonesia" element={<Indo />} />
-            <Route path="/travel/Guatemala" element={<Guatemala />} />
-            <Route path="/projects/electric-forecast" element={<Electric />} />
+              
+              {/* Other routes are lazy-loaded with Suspense */}
+              <Route path="/photos" element={<Suspense fallback={<Landing />}><Photos /></Suspense>} />
+              <Route path="/projects" element={<Suspense fallback={<Landing />}><Projects /></Suspense>} />
+              <Route path="/about" element={<Suspense fallback={<Landing />}><About /></Suspense>} />
+              <Route path="/greece" element={<Suspense fallback={<Landing />}><Greece /></Suspense>} />
+              <Route path="/contact" element={<Suspense fallback={<Landing />}><Contact /></Suspense>} />
+              <Route path="/projects/photoEveryday" element={<Suspense fallback={<Landing />}><PhotoEveryday /></Suspense>} />
+              <Route path="/comingSoon" element={<Suspense fallback={<Landing />}><ComingSoon /></Suspense>} />
+              <Route path="/projects/robocv" element={<Suspense fallback={<Landing />}><Robocv /></Suspense>} />
+              <Route path="/projects/hike" element={<Suspense fallback={<Landing />}><HikeData /></Suspense>} />
+              <Route path="/projects/parallel" element={<Suspense fallback={<Landing />}><Kmeans /></Suspense>} />
+              <Route path="/travel/Indonesia" element={<Suspense fallback={<Landing />}><Indo /></Suspense>} />
+              <Route path="/travel/Guatemala" element={<Suspense fallback={<Landing />}><Guatemala /></Suspense>} />
+              <Route path="/projects/electric-forecast" element={<Suspense fallback={<Landing />}><Electric /></Suspense>} />
           </Routes>
         </div>
         <Footer className='footer'/>

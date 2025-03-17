@@ -2,7 +2,6 @@ import React from 'react';
 import { useEffect, useRef  } from "react";
 import './electricForecast.css';
 import mediaData from '../../assets/Media/ElectricalForecast.json'
-import { embed } from '@bokeh/bokehjs';
 
 
 const media = mediaData.map(item => item.url); 
@@ -18,9 +17,21 @@ const ElectricForecast = () => {
             const target = document.getElementById('bokeh-target');
             if (target && !isEmbeddedRef.current) {
                 target.innerHTML = '';
-                embed.embed_item(json, 'bokeh-target');
+                await loadScript('https://cdn.bokeh.org/bokeh/release/bokeh-3.4.0.min.js');
+                window.Bokeh.embed.embed_item(json, 'bokeh-target', { disable_mathjax: true });
                 isEmbeddedRef.current = true;
             }
+        };
+
+        const loadScript = (src) => {
+            return new Promise((resolve, reject) => {
+                const script = document.createElement('script');
+                script.src = src;
+                script.async = true;
+                script.onload = resolve;
+                script.onerror = reject;
+                document.head.appendChild(script);
+            });
         };
 
         fetchAndEmbed();
@@ -47,7 +58,7 @@ const ElectricForecast = () => {
                     <p className='header-ef'> Inspiration </p>
                 </div> 
                 {/* text - inspiration */}
-                <div className='pictureRow'>
+                <div className='pictureRow-ef'>
 
                     <div className="picture-box-ef">
                         <p>
@@ -64,7 +75,7 @@ const ElectricForecast = () => {
                     <p className='header-ef'> Process </p>
                 </div> 
                 {/* text - Process */}
-                <div className='pictureRow'>
+                <div className='pictureRow-ef'>
 
                     <div className="picture-box-ef">
                         <p>
@@ -77,25 +88,25 @@ const ElectricForecast = () => {
                 </div>
 
                 {/* plots - dist& per hour */}
-                <div className='pictureRow'>
+                <div className='pictureRow-ef'>
 
-                    <img src={media[5]} alt="ElectricalForecast" className="imagegul"/>     
-                    <img src={media[3]} alt="ElectricalForecast" className="imagegul"/>               
+                    <img src={media[5]} alt="ElectricalForecast" className="imageef"/>     
+                    <img src={media[3]} alt="ElectricalForecast" className="imageef"/>               
                 </div>
                 {/* plots - per day & per month */}
-                <div className='pictureRow'>
+                <div className='pictureRow-ef'>
 
-                    <img src={media[2]} alt="ElectricalForecast" className="imagegul"/>     
-                    <img src={media[4]} alt="ElectricalForecast" className="imagegul"/>               
+                    <img src={media[2]} alt="ElectricalForecast" className="imageef"/>     
+                    <img src={media[4]} alt="ElectricalForecast" className="imageef"/>               
                 </div>
                 {/* plots - heatmap */}
-                <div className='pictureRow'>
+                <div className='pictureRow-ef'>
 
                     <img src={media[6]} alt="ElectricalForecast" className="imageheat"/>                  
                 </div>
 
                 {/* text - Process continued*/}
-                <div className='pictureRow'>
+                <div className='pictureRow-ef'>
 
                     <div className="picture-box-ef">
                         <p>
@@ -116,7 +127,7 @@ const ElectricForecast = () => {
 
 
                 {/* text - Process cont */}
-                <div className='pictureRow'>
+                <div className='pictureRow-ef'>
 
                     <div className="picture-box-ef">
                         <p>
@@ -129,14 +140,14 @@ const ElectricForecast = () => {
                     </div>
                 </div>
                 {/* plot - ts decop */}
-                <div className='pictureRow'>
+                <div className='pictureRow-ef'>
 
-                    <img src={media[10]} alt="Guat" className="imageheat"/>
+                    <img src={media[10]} alt="ef" className="imageheat"/>
                 </div>
 
 
                 {/* text - Process continued 2*/}
-                <div className='pictureRow'>
+                <div className='pictureRow-ef'>
 
                     <div className="picture-box-ef">
                         <p>
@@ -149,20 +160,20 @@ const ElectricForecast = () => {
                 </div>
 
                 {/* plots - summary and autocorrelation */}
-                <div className='pictureRow'>
+                <div className='pictureRow-ef'>
 
-                    <img src={media[11]} alt="ElectricalForecast" className="imagegul"/>     
-                    <img src={media[0]} alt="ElectricalForecast" className="imagegul"/>               
+                    <img src={media[11]} alt="ElectricalForecast" className="imageef"/>     
+                    <img src={media[0]} alt="ElectricalForecast" className="imageef"/>               
                 </div>
                 {/* plots - qq and resid hist */}
-                <div className='pictureRow'>
+                <div className='pictureRow-ef'>
 
-                    <img src={media[7]} alt="ElectricalForecast" className="imagegul"/>     
-                    <img src={media[8]} alt="ElectricalForecast" className="imagegul"/>               
+                    <img src={media[7]} alt="ElectricalForecast" className="imageef"/>     
+                    <img src={media[8]} alt="ElectricalForecast" className="imageef"/>               
                 </div>
 
                 {/* text - Process forecast*/}
-                <div className='pictureRow'>
+                <div className='pictureRow-ef'>
 
                     <div className="picture-box-ef">
                         <p>
@@ -180,12 +191,12 @@ const ElectricForecast = () => {
                     <p className='header-ef'> Results </p>
                 </div> 
                 {/* plots - pred vs actual */}
-                <div className='pictureRow'>
+                <div className='pictureRow-ef'>
 
                     <img src={media[9]} alt="ElectricalForecast" className="imageheat"/>     
                 </div>
                 {/* text - Results */}
-                <div className='pictureRow'>
+                <div className='pictureRow-ef'>
 
                     <div className="picture-box-ef">
                         <p>
@@ -214,7 +225,7 @@ const ElectricForecast = () => {
                     <p className='header-ef'> Conclusion </p>
                 </div> 
                 {/* text - Conclusion */}
-                <div className='pictureRow'>
+                <div className='pictureRow-ef'>
 
                     <div className="picture-box-ef">
                         <p>
@@ -246,9 +257,9 @@ const ElectricForecast = () => {
                     <p className='header-ef'> In Progress & Next Steps </p>
                 </div> 
                 {/* text - NextSteps */}
-                <div className='pictureRow'>
+                <div className='pictureRow-ef'>
 
-                    <div className="text-box" style={{ width: "80%" }}>
+                    <div className="text-box-ef">
                         <ul>
                             <li>Develop an LSTM ML model with additional input data, including number of occupants & weather</li>
                             <li>Gather local pricing information, including surge pricing, to convert kWh to dollar amounts</li>

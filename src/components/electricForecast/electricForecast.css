@@ -30,7 +30,12 @@
     text-align: center;
     z-index: 2;
 }
-
+.pictureRow-ef {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 .picture-box-ef {
   text-align: center;  
   width: 70%;
@@ -54,8 +59,13 @@
     width: 80%;
     height: auto;  
 }
-
-
+.imageef {
+    width: 40%;
+    height: auto;  
+}
+.text-box-ef{
+    width: 70%;
+}
 
 
 
@@ -71,4 +81,7 @@
      .picture-box-ef {
         width: 90%;  
       }
+      .text-box-ef{
+        width: 80%;
+    }
   }
