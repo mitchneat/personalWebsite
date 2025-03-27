@@ -15,6 +15,14 @@ const Projects = () => {
         <div className='image-page'>
             {/*!!!!!!!!!!!!!!!!!all pictures have to be 16:9 asspect ratio!!!!!!!!!!!! */}
 
+            <Link to='/projects/puzzle' className="image-link">
+                <div className="rectangle image-container">
+                    <img src="https://mitch-neat-website-data.s3.amazonaws.com/ElectricalForecast/daily_usage_with_7day_trail2.png" alt='picat' className='logoimage1'/>
+                    <p className='projoverlayText'>Puzzle Solver</p>
+                </div>  
+            </Link>
+
+
             <Link to='/projects/electric-forecast' className="image-link">
                 <div className="rectangle image-container">
                     <img src="https://mitch-neat-website-data.s3.amazonaws.com/ElectricalForecast/daily_usage_with_7day_trail2.png" alt='picat' className='logoimage1'/>

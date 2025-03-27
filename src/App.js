@@ -21,7 +21,7 @@ const Kmeans = lazy(() => import("./components/kmeans/kmeans"));
 const Indo = lazy(() => import("./components/indo/indo"));
 const Guatemala = lazy(() => import("./components/guatemala/guatemala"));
 const Electric = lazy(() => import("./components/electricForecast/electricForecast"));
-
+const Puzzle = lazy(() => import("./components/puzzle/puzzle"));
 
 function App() {
 
@@ -49,6 +49,7 @@ function App() {
               <Route path="/travel/Indonesia" element={<Suspense fallback={<Landing />}><Indo /></Suspense>} />
               <Route path="/travel/Guatemala" element={<Suspense fallback={<Landing />}><Guatemala /></Suspense>} />
               <Route path="/projects/electric-forecast" element={<Suspense fallback={<Landing />}><Electric /></Suspense>} />
+              <Route path="/projects/puzzle" element={<Suspense fallback={<Landing />}><Puzzle /></Suspense>} />
           </Routes>
         </div>
         <Footer className='footer'/>
