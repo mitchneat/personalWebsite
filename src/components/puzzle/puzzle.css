@@ -1,0 +1,83 @@
+.bg-wrapper-pm{
+    background-color: rgb(102, 78, 56);
+    padding-top: calc(5rem + 2%); 
+    padding-bottom: 5rem;
+}
+
+.blogPage-pm {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+    gap: 10px;  
+    
+}
+
+.titleblock-pm {
+    position: relative;
+    display: inline-block;
+}
+.title-pm{
+    font-size: clamp(2.25rem, 5vw, 5rem); 
+    font-family: 'Prompt', sans-serif;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.header-pm{
+    font-size: clamp(1.75rem, 3vw, 2.5rem); 
+    font-family: 'Prompt', sans-serif;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+.pictureRow-pm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.picture-box-pm {
+  text-align: center;  
+  width: 70%;
+}
+
+.picture-box-pm p{
+    font-family: "Poppins", serif;
+    font-size: clamp(1rem, 1vw, 5rem); 
+}
+
+.imagepmL {
+    width: 40%;
+    height: auto;  
+}
+.imagepmP {
+    width: 22.5%;
+    height: auto;  
+}
+
+.imagepmP-s {
+    width: 22.5%;
+    height: auto;  
+}
+.imagepmL-s {
+    width: 40%;
+    height: auto;  
+}
+
+@media (max-width: 768px) {
+     .picture-box-pm {
+        width: 90%;  
+      }
+      .text-box-pm{
+        width: 80%;
+    }
+
+    .imagepmP {
+        width: 40%;
+    }
+    .imagepmL {
+        width: 70%; 
+    }
+  }
