@@ -3,7 +3,7 @@ import json
 
 # Define the base bucket and folder
 base_bucket_name = "mitch-neat-website-data"
-folder_name = "ElectricalForecast/"  # Include the trailing slash # WHAT TO CHANEG ----------------------
+folder_name = "puzzle-matcher/"  # Include the trailing slash # WHAT TO CHANGE ----------------------
 
 # Configure AWS S3 client
 s3 = boto3.client("s3")

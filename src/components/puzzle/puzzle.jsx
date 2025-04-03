@@ -1,6 +1,8 @@
 import React from 'react';
 import './puzzle.css';
+import mediaData from '../../assets/Media/puzzle-matcher.json'
 
+const media = mediaData.map(item => item.url); 
 
 const Puzzle = () => {
     return (
@@ -14,8 +16,8 @@ const Puzzle = () => {
 
                 {/* pics - puzzle picture */}
                 <div className='pictureRow-pm'>
-
-                    <img src='https://mitch-neat-website-data.s3.us-east-2.amazonaws.com/puzzle-matcher/puzzle_base.jpg' alt="puzz" className="imagepmL"/>                
+  
+                    <img src={media[11]} alt="puzz" className="imagepmL"/>                
                 </div>
 
                 {/* header - inspiration */}
@@ -57,9 +59,9 @@ const Puzzle = () => {
                 {/* pics - manual solving */}
                 <div className='pictureRow-pm'>
 
-                    <img src='https://mitch-neat-website-data.s3.us-east-2.amazonaws.com/puzzle-matcher/pairings.jpg' alt="puzz" className="imagepmP"/>        
-                    <img src='https://mitch-neat-website-data.s3.us-east-2.amazonaws.com/puzzle-matcher/outline.jpg' alt="puzz" className="imagepmP"/>                
-                    <img src='https://mitch-neat-website-data.s3.us-east-2.amazonaws.com/puzzle-matcher/progress1.jpg' alt="puzz" className="imagepmL"/>  
+                    <img src={media[7]} alt="puzz" className="imagepmP"/>        
+                    <img src={media[4]} alt="puzz" className="imagepmP"/>                
+                    <img src={media[9]} alt="puzz" className="imagepmL"/>  
                 </div>
 
 
@@ -89,8 +91,8 @@ const Puzzle = () => {
                 {/* pics - roboflow */}
                 <div className='pictureRow-pm'>
 
-                    <img src='https://mitch-neat-website-data.s3.us-east-2.amazonaws.com/puzzle-matcher/annotating+data.jpg' alt="puzz" className="imagepmP"/>        
-                    <img src='https://mitch-neat-website-data.s3.us-east-2.amazonaws.com/puzzle-matcher/annotation_outline.jpg' alt="puzz" className="imagepmP"/>                
+                    <img src={media[0]} alt="puzz" className="imagepmP"/>        
+                    <img src={media[1]} alt="puzz" className="imagepmP"/>                
                     
                 </div>
 
@@ -114,8 +116,8 @@ const Puzzle = () => {
                 {/* pics - first model matching */}
                 <div className='pictureRow-pm'>
 
-                    <img src='https://mitch-neat-website-data.s3.us-east-2.amazonaws.com/puzzle-matcher/output_holes_v3.jpg' alt="puzz" className="imagepmP"/>        
-                    <img src='https://mitch-neat-website-data.s3.us-east-2.amazonaws.com/puzzle-matcher/output_pieces_v3.jpg' alt="puzz" className="imagepmP"/>                
+                    <img src={media[5]} alt="puzz" className="imagepmP"/>        
+                    <img src={media[6]} alt="puzz" className="imagepmP"/>                
                     
                 </div>
                 
@@ -155,7 +157,7 @@ const Puzzle = () => {
                 {/* pics - model output */}
                 <div className='pictureRow-pm'>
 
-                    <img src='https://mitch-neat-website-data.s3.us-east-2.amazonaws.com/puzzle-matcher/modelOutput.jpg' alt="puzz" className="imagepmP"/>                            
+                    <img src={media[3]} alt="puzz" className="imagepmP"/>                            
                 </div>
 
                 {/* text - Process */}
@@ -188,7 +190,7 @@ const Puzzle = () => {
                 {/* pics - all the pieces */}
                 <div className='pictureRow-pm'>
 
-                    <img src='https://mitch-neat-website-data.s3.us-east-2.amazonaws.com/puzzle-matcher/piecesLinedUp.jpg' alt="puzz" className="imagepmL"/>                            
+                    <img src={media[8]} alt="puzz" className="imagepmL"/>                            
                 </div>
 
                 {/* header - Results */}
@@ -200,7 +202,7 @@ const Puzzle = () => {
                 {/* pics - all the pieces */}
                 <div className='pictureRow-pm'>
 
-                    <img src='https://mitch-neat-website-data.s3.us-east-2.amazonaws.com/puzzle-matcher/complete.jpg' alt="puzz" className="imagepmL"/>                            
+                    <img src={media[2]} alt="puzz" className="imagepmL"/>                            
                 </div>
 
                 {/* text - Results */}

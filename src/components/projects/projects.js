@@ -17,7 +17,7 @@ const Projects = () => {
 
             <Link to='/projects/puzzle' className="image-link">
                 <div className="rectangle image-container">
-                    <img src="https://mitch-neat-website-data.s3.us-east-2.amazonaws.com/puzzle-matcher/projectCover3.jpg" alt='picat' className='logoimage1'/>
+                    <img src="https://mitch-neat-website-data.s3.us-east-2.amazonaws.com/puzzle-matcher/projectCover.jpg" alt='picat' className='logoimage1'/>
                     <p className='projoverlayText'>Puzzle Solver</p>
                 </div>  
             </Link>
