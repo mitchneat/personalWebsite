@@ -56,3 +56,28 @@
     width: 22.5%;
     height: auto;  
 }
+
+.imagepmP-s {
+    width: 22.5%;
+    height: auto;  
+}
+.imagepmL-s {
+    width: 40%;
+    height: auto;  
+}
+
+@media (max-width: 768px) {
+     .picture-box-pm {
+        width: 90%;  
+      }
+      .text-box-pm{
+        width: 80%;
+    }
+
+    .imagepmP {
+        width: 40%;
+    }
+    .imagepmL {
+        width: 70%; 
+    }
+  }

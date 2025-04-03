@@ -59,9 +59,9 @@ const Puzzle = () => {
                 {/* pics - manual solving */}
                 <div className='pictureRow-pm'>
 
-                    <img src={media[7]} alt="puzz" className="imagepmP"/>        
-                    <img src={media[4]} alt="puzz" className="imagepmP"/>                
-                    <img src={media[9]} alt="puzz" className="imagepmL"/>  
+                    <img src={media[7]} alt="puzz" className="imagepmP-s"/>        
+                    <img src={media[4]} alt="puzz" className="imagepmP-s"/>                
+                    <img src={media[9]} alt="puzz" className="imagepmL-s"/>  
                 </div>
 
 
