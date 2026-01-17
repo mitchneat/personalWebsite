@@ -12,6 +12,38 @@
     height: auto;
 }
 
+.video-container-pe {
+    width: 55%;
+    position: relative;
+}
+
+/* Make video fill container */
+.video-container-pe .videoPlayerPE {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Hide controls by default, show on hover */
+.video-container-pe video::-webkit-media-controls {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-container-pe:hover video::-webkit-media-controls {
+    opacity: 1;
+}
+
+/* For Firefox - controls panel */
+.video-container-pe video::-moz-range-track {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-container-pe:hover video::-moz-range-track {
+    opacity: 1;
+}
+
 .bottom-section-pe {
     margin-top: 4rem;
     margin-bottom: 1rem;
@@ -68,6 +100,10 @@ h2 {
     .videoPlayerPE{
         width:100%;
         height: auto;
+        padding-top: 1rem;
+    }
+    .video-container-pe {
+        width: 100%;
         padding-top: 1rem;
     }
 }
